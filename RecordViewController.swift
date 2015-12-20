@@ -18,6 +18,7 @@ class RecordViewController: UIViewController {
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         // button.setImage(UIImage(named:"thumbsUp.png"), forState: .Normal)
         button.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
+        
         view.addSubview(button)
     }
     
@@ -27,7 +28,18 @@ class RecordViewController: UIViewController {
     }
     
     func buttonPressed() {
-        print("I pressed the button!")
+        let alert = UIAlertController(title: "Watch Out!",
+            message: "Are you sure that you would like to start recording?",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Close",
+            style: UIAlertActionStyle.Destructive,
+            handler: nil))
+        alert.addAction(UIAlertAction(title: "OK",
+            style: UIAlertActionStyle.Default,
+            handler: nil))
+        self.presentViewController(alert,
+            animated: true,
+            completion: nil)
     }
     
 }

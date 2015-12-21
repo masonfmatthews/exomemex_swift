@@ -17,7 +17,7 @@
 		B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172B1C24AF1B0011F0DB /* RecordViewController.swift */; };
 		B082172E1C24B30C0011F0DB /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */; };
 		B08217301C24B3A20011F0DB /* QuestionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */; };
-		B0FCCE171C28675E009FECB0 /* ApiInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* ApiInterface.swift */; };
+		B0FCCE171C28675E009FECB0 /* GetPeopleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* GetPeopleApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		B082172B1C24AF1B0011F0DB /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordViewController.swift; path = ../RecordViewController.swift; sourceTree = "<group>"; };
 		B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableView.swift; sourceTree = "<group>"; };
-		B0FCCE161C28675E009FECB0 /* ApiInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiInterface.swift; sourceTree = "<group>"; };
+		B0FCCE161C28675E009FECB0 /* GetPeopleApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeopleApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				B0561F441C24839E00213F33 /* Info.plist */,
 				B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */,
 				B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */,
-				B0FCCE161C28675E009FECB0 /* ApiInterface.swift */,
+				B0FCCE161C28675E009FECB0 /* GetPeopleApi.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08217301C24B3A20011F0DB /* QuestionsTableView.swift in Sources */,
-				B0FCCE171C28675E009FECB0 /* ApiInterface.swift in Sources */,
+				B0FCCE171C28675E009FECB0 /* GetPeopleApi.swift in Sources */,
 				B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */,
 				B0561F3B1C24839E00213F33 /* ViewController.swift in Sources */,
 				B082172E1C24B30C0011F0DB /* QuestionsViewController.swift in Sources */,

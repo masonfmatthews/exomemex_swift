@@ -37,9 +37,9 @@ class RecordViewController: UIViewController {
         button.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
         
         view.addSubview(button)
-        let namesApi = ApiInterface()
-        nameLabel.text = "There are \(namesApi.getCountOfNames()) names."
-        nameField.text = namesApi.getFirstName()
+        let people = GetPeopleApi()
+        nameLabel.text = "There are \(people.getCountOfNames()) names."
+        nameField.text = people.getFirstName()
     }
     
     override func didReceiveMemoryWarning() {

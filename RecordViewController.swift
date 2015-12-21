@@ -9,6 +9,21 @@
 import UIKit
 
 class RecordViewController: UIViewController {
+    @IBOutlet weak var resetButton: UIButton!
+    @IBAction func resetRecording(sender: AnyObject) {
+        let alert = UIAlertController(title: "Watch Out!",
+            message: "Are you sure that you would like to start recording?",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Close",
+            style: UIAlertActionStyle.Destructive,
+            handler: nil))
+        alert.addAction(UIAlertAction(title: "OK",
+            style: UIAlertActionStyle.Default,
+            handler: nil))
+        self.presentViewController(alert,
+            animated: true,
+            completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,18 +43,7 @@ class RecordViewController: UIViewController {
     }
     
     func buttonPressed() {
-        let alert = UIAlertController(title: "Watch Out!",
-            message: "Are you sure that you would like to start recording?",
-            preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Close",
-            style: UIAlertActionStyle.Destructive,
-            handler: nil))
-        alert.addAction(UIAlertAction(title: "OK",
-            style: UIAlertActionStyle.Default,
-            handler: nil))
-        self.presentViewController(alert,
-            animated: true,
-            completion: nil)
+        print("Round button pressed!")
     }
     
 }

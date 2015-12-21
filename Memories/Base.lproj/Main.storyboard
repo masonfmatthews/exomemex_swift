@@ -113,10 +113,16 @@
                                 <state key="normal" title="Stop and Delete">
                                     <color key="titleColor" red="1" green="0.014148592377726477" blue="0.017517807034689969" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetRecording:" destination="Pzk-GN-SIr" eventType="touchUpInside" id="iay-74-Rhl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="resetButton" destination="9De-HB-Xkz" id="3ed-ml-54G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewF-nH-l9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

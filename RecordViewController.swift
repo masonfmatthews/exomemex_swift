@@ -13,18 +13,7 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     @IBAction func resetRecording(sender: AnyObject) {
-        let alert = UIAlertController(title: "Watch Out!",
-            message: "Are you sure that you would like to start recording?",
-            preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Close",
-            style: UIAlertActionStyle.Destructive,
-            handler: nil))
-        alert.addAction(UIAlertAction(title: "OK",
-            style: UIAlertActionStyle.Default,
-            handler: nil))
-        self.presentViewController(alert,
-            animated: true,
-            completion: nil)
+        PostPersonApi(personFields: ["name": nameField.text!])
     }
     override func viewDidLoad() {
         super.viewDidLoad()

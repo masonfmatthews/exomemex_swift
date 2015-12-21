@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVV-Iq-sLc">
-                                <rect key="frame" x="162" y="120" width="51" height="30"/>
+                                <rect key="frame" x="162" y="120" width="51" height="31"/>
                                 <state key="normal" title="Journal"/>
                                 <connections>
                                     <segue destination="kIM-RB-YM8" kind="show" id="sr2-b1-6go"/>
@@ -36,8 +36,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2IQ-8g-cdZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9DV-Z5-GgG"/>
+                            <constraint firstItem="LVV-Iq-sLc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="GDO-ZT-LVL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U8J-1N-Qgs" secondAttribute="bottom" constant="100" id="RCJ-Bn-uCd"/>
-                            <constraint firstItem="LVV-Iq-sLc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="V3y-yl-cKz"/>
                             <constraint firstItem="U8J-1N-Qgs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dll-a8-YMk"/>
                             <constraint firstItem="2IQ-8g-cdZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m4f-5B-y90"/>
                             <constraint firstItem="LVV-Iq-sLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rur-v9-tZl"/>
@@ -117,16 +117,29 @@
                                     <action selector="resetRecording:" destination="Pzk-GN-SIr" eventType="touchUpInside" id="iay-74-Rhl"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azC-5y-gWM">
+                                <rect key="frame" x="90" y="230" width="195" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re8-sM-WeR">
+                                <rect key="frame" x="166" y="201" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="nameField" destination="azC-5y-gWM" id="SvS-0p-v0B"/>
+                        <outlet property="nameLabel" destination="re8-sM-WeR" id="OqG-s0-Uvf"/>
                         <outlet property="resetButton" destination="9De-HB-Xkz" id="3ed-ml-54G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewF-nH-l9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="339"/>
+            <point key="canvasLocation" x="1751.5" y="338.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rpb-ki-Kmm">

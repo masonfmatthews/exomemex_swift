@@ -10,6 +10,8 @@ import UIKit
 
 class RecordViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBAction func resetRecording(sender: AnyObject) {
         let alert = UIAlertController(title: "Watch Out!",
             message: "Are you sure that you would like to start recording?",
@@ -35,6 +37,9 @@ class RecordViewController: UIViewController {
         button.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
         
         view.addSubview(button)
+        
+        nameLabel.text = ApiInterface.countPeople()
+        nameField.text = ApiInterface.getPeople()
     }
     
     override func didReceiveMemoryWarning() {

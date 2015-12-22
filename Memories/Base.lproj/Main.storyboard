@@ -18,29 +18,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVV-Iq-sLc">
-                                <rect key="frame" x="162" y="120" width="51" height="31"/>
-                                <state key="normal" title="Journal"/>
+                                <rect key="frame" x="136" y="318" width="102" height="31"/>
+                                <state key="normal" title="Be Interviewed"/>
                                 <connections>
                                     <segue destination="kIM-RB-YM8" kind="show" id="sr2-b1-6go"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8J-1N-Qgs">
-                                <rect key="frame" x="156" y="537" width="63" height="30"/>
-                                <state key="normal" title="Interview"/>
+                                <rect key="frame" x="115" y="189" width="144" height="30"/>
+                                <state key="normal" title="Make a Journal Entry"/>
+                                <connections>
+                                    <segue destination="Pzk-GN-SIr" kind="show" id="K0d-6o-Raa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IQ-8g-cdZ">
-                                <rect key="frame" x="104" y="319" width="166" height="30"/>
-                                <state key="normal" title="2 Questions from Family"/>
+                                <rect key="frame" x="83" y="448" width="208" height="30"/>
+                                <state key="normal" title="Answer Questions from Family"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What would you like to do today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iF-IT-WSe">
+                                <rect key="frame" x="61" y="115" width="252" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-Df-xE1">
+                                <rect key="frame" x="92" y="578" width="190" height="30"/>
+                                <state key="normal" title="Listen to Your Existing Clips"/>
+                                <connections>
+                                    <segue destination="ZH2-TG-oyS" kind="show" id="IOz-xE-duB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="U8J-1N-Qgs" firstAttribute="top" secondItem="2iF-IT-WSe" secondAttribute="bottom" constant="52" id="1iT-2s-Wuf"/>
+                            <constraint firstItem="pcb-Df-xE1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7lq-Wn-Ng4"/>
                             <constraint firstItem="2IQ-8g-cdZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9DV-Z5-GgG"/>
-                            <constraint firstItem="LVV-Iq-sLc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="GDO-ZT-LVL"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U8J-1N-Qgs" secondAttribute="bottom" constant="100" id="RCJ-Bn-uCd"/>
+                            <constraint firstItem="LVV-Iq-sLc" firstAttribute="top" secondItem="U8J-1N-Qgs" secondAttribute="bottom" constant="100" id="BzR-s4-gr1"/>
+                            <constraint firstItem="LVV-Iq-sLc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ORG-B5-1wP"/>
                             <constraint firstItem="U8J-1N-Qgs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dll-a8-YMk"/>
-                            <constraint firstItem="2IQ-8g-cdZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m4f-5B-y90"/>
-                            <constraint firstItem="LVV-Iq-sLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rur-v9-tZl"/>
+                            <constraint firstItem="LVV-Iq-sLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lNE-9F-M06"/>
+                            <constraint firstItem="2IQ-8g-cdZ" firstAttribute="top" secondItem="LVV-Iq-sLc" secondAttribute="bottom" constant="100" id="pHR-VC-qKd"/>
+                            <constraint firstItem="2iF-IT-WSe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pNH-mr-nBY"/>
+                            <constraint firstItem="pcb-Df-xE1" firstAttribute="top" secondItem="2IQ-8g-cdZ" secondAttribute="bottom" constant="100" id="y6L-gG-LF1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Memories" id="Icr-1j-yQ9">
@@ -51,6 +71,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="765.5" y="663.5"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="12M-L6-C8A">
+            <objects>
+                <tableViewController id="ZH2-TG-oyS" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2JG-He-Ifg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dMh-B5-buL">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dMh-B5-buL" id="Oho-Wr-BC1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZH2-TG-oyS" id="cXr-6O-FBa"/>
+                            <outlet property="delegate" destination="ZH2-TG-oyS" id="ICT-bH-cqS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k88-fn-3um" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765.5" y="1459.5"/>
         </scene>
         <!--Questions View Controller-->
         <scene sceneID="TmA-IG-6uP">
@@ -87,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyy-im-5tc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1299.5" y="455.5"/>
+            <point key="canvasLocation" x="1300.5" y="663.5"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="llQ-zq-Xhf">
@@ -139,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewF-nH-l9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1751.5" y="338.5"/>
+            <point key="canvasLocation" x="1788.5" y="663.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rpb-ki-Kmm">
@@ -159,4 +207,7 @@
             <point key="canvasLocation" x="315.5" y="663.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="K0d-6o-Raa"/>
+    </inferredMetricsTieBreakers>
 </document>

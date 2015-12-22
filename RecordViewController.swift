@@ -13,7 +13,7 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     @IBAction func resetRecording(sender: AnyObject) {
-        PostPersonApi(personFields: ["name": nameField.text!], callback: {label -> Void in self.nameLabel.text = label})
+        PostPersonApi(personFields: ["name": nameField.text!], callback: createPersonCallback)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +38,10 @@ class RecordViewController: UIViewController {
     
     func buttonPressed() {
         print("Round button pressed!")
+    }
+    
+    private func createPersonCallback(person: Person) {
+        self.nameLabel.text = "\(person.id)"
     }
     
 }

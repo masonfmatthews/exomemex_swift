@@ -11,8 +11,9 @@ import Foundation
 class PostPersonApi {
     
     let apiRoot = "https://exomemex-api.herokuapp.com/api/v1/"
+    var person = Person(id:0, name: "Error")
 
-    init(personFields: Dictionary<String,String>, callback: (String) -> Void) {
+    init(personFields: Dictionary<String,String>, callback: (Person) -> Void) {
         let request = NSMutableURLRequest(URL: NSURL(string: apiRoot + "people")!)
         request.HTTPMethod = "POST"
         
@@ -39,8 +40,9 @@ class PostPersonApi {
             }
             print("response = \(response)")
             print("responseString = \(responseString)")
+            self.person = Person(id: 1, name: "Me!!!!")
             Thread.runOnUIThread {
-                callback("Record was saved successfully!")
+                callback(self.person)
             }
         }
         

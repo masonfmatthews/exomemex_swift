@@ -12,6 +12,15 @@ class OldClipsController: UITableViewController {
     
     var clips : [Clip] = [Clip(id: 1, name: "First Clip")]
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Thread.runOnBackgroundThread {
+            //self.people = ApiInterface.getPeople()
+            Thread.runOnUIThread(self.tableView.reloadData)
+        }
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

@@ -13,7 +13,7 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     @IBAction func resetRecording(sender: AnyObject) {
-        PostPersonApi(personFields: ["name": nameField.text!], callback: createPersonCallback)
+        CreateUserApi(userFields: ["name": nameField.text!], callback: createUserCallback)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,9 @@ class RecordViewController: UIViewController {
         button.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
         
         view.addSubview(button)
-        let people = GetPeopleApi()
-        nameLabel.text = "There are \(people.getCountOfNames()) names."
-        nameField.text = people.getFirstName()
+        let users = GetUsersApi()
+        nameLabel.text = "There are \(users.getCount()) names."
+        nameField.text = users.getFirstName()
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,8 +40,8 @@ class RecordViewController: UIViewController {
         print("Round button pressed!")
     }
     
-    private func createPersonCallback(person: Person) {
-        self.nameLabel.text = "\(person.id)"
+    private func createUserCallback(user: User) {
+        self.nameLabel.text = "\(user.id)"
     }
     
 }

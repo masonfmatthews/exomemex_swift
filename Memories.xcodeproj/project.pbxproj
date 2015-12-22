@@ -14,9 +14,9 @@
 		B0561F431C24839E00213F33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0561F411C24839E00213F33 /* LaunchScreen.storyboard */; };
 		B0561F4E1C24839E00213F33 /* MemoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F4D1C24839E00213F33 /* MemoriesTests.swift */; };
 		B0561F591C24839E00213F33 /* MemoriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F581C24839E00213F33 /* MemoriesUITests.swift */; };
-		B07AA65B1C28719F00695F96 /* PostPersonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65A1C28719F00695F96 /* PostPersonApi.swift */; };
+		B07AA65B1C28719F00695F96 /* CreateUserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65A1C28719F00695F96 /* CreateUserApi.swift */; };
 		B07AA65D1C29B58C00695F96 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65C1C29B58C00695F96 /* Thread.swift */; };
-		B07AA65F1C29B85B00695F96 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65E1C29B85B00695F96 /* Person.swift */; };
+		B07AA65F1C29B85B00695F96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65E1C29B85B00695F96 /* User.swift */; };
 		B07AA6611C29CDC400695F96 /* OldClipsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6601C29CDC400695F96 /* OldClipsController.swift */; };
 		B07AA6631C29CE5F00695F96 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6621C29CE5F00695F96 /* Clip.swift */; };
 		B07AA6651C29D81200695F96 /* GetClipsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6641C29D81200695F96 /* GetClipsApi.swift */; };
@@ -25,7 +25,7 @@
 		B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172B1C24AF1B0011F0DB /* RecordViewController.swift */; };
 		B082172E1C24B30C0011F0DB /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */; };
 		B08217301C24B3A20011F0DB /* QuestionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */; };
-		B0FCCE171C28675E009FECB0 /* GetPeopleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* GetPeopleApi.swift */; };
+		B0FCCE171C28675E009FECB0 /* GetUsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* GetUsersApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +59,9 @@
 		B0561F541C24839E00213F33 /* MemoriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0561F581C24839E00213F33 /* MemoriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesUITests.swift; sourceTree = "<group>"; };
 		B0561F5A1C24839E00213F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B07AA65A1C28719F00695F96 /* PostPersonApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostPersonApi.swift; sourceTree = "<group>"; };
+		B07AA65A1C28719F00695F96 /* CreateUserApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserApi.swift; sourceTree = "<group>"; };
 		B07AA65C1C29B58C00695F96 /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
-		B07AA65E1C29B85B00695F96 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B07AA65E1C29B85B00695F96 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B07AA6601C29CDC400695F96 /* OldClipsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldClipsController.swift; sourceTree = "<group>"; };
 		B07AA6621C29CE5F00695F96 /* Clip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		B07AA6641C29D81200695F96 /* GetClipsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetClipsApi.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		B082172B1C24AF1B0011F0DB /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordViewController.swift; path = ../RecordViewController.swift; sourceTree = "<group>"; };
 		B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableView.swift; sourceTree = "<group>"; };
-		B0FCCE161C28675E009FECB0 /* GetPeopleApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeopleApi.swift; sourceTree = "<group>"; };
+		B0FCCE161C28675E009FECB0 /* GetUsersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUsersApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +130,10 @@
 				B0561F441C24839E00213F33 /* Info.plist */,
 				B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */,
 				B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */,
-				B0FCCE161C28675E009FECB0 /* GetPeopleApi.swift */,
-				B07AA65A1C28719F00695F96 /* PostPersonApi.swift */,
+				B0FCCE161C28675E009FECB0 /* GetUsersApi.swift */,
+				B07AA65A1C28719F00695F96 /* CreateUserApi.swift */,
 				B07AA65C1C29B58C00695F96 /* Thread.swift */,
-				B07AA65E1C29B85B00695F96 /* Person.swift */,
+				B07AA65E1C29B85B00695F96 /* User.swift */,
 				B07AA6601C29CDC400695F96 /* OldClipsController.swift */,
 				B07AA6621C29CE5F00695F96 /* Clip.swift */,
 				B07AA6641C29D81200695F96 /* GetClipsApi.swift */,
@@ -293,15 +293,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07AA6691C29DB9E00695F96 /* SessionController.swift in Sources */,
-				B07AA65B1C28719F00695F96 /* PostPersonApi.swift in Sources */,
+				B07AA65B1C28719F00695F96 /* CreateUserApi.swift in Sources */,
 				B08217301C24B3A20011F0DB /* QuestionsTableView.swift in Sources */,
-				B0FCCE171C28675E009FECB0 /* GetPeopleApi.swift in Sources */,
+				B0FCCE171C28675E009FECB0 /* GetUsersApi.swift in Sources */,
 				B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */,
 				B0561F3B1C24839E00213F33 /* ViewController.swift in Sources */,
 				B07AA6651C29D81200695F96 /* GetClipsApi.swift in Sources */,
 				B082172E1C24B30C0011F0DB /* QuestionsViewController.swift in Sources */,
 				B07AA6671C29DB5F00695F96 /* Session.swift in Sources */,
-				B07AA65F1C29B85B00695F96 /* Person.swift in Sources */,
+				B07AA65F1C29B85B00695F96 /* User.swift in Sources */,
 				B0561F391C24839E00213F33 /* AppDelegate.swift in Sources */,
 				B07AA65D1C29B58C00695F96 /* Thread.swift in Sources */,
 				B07AA6611C29CDC400695F96 /* OldClipsController.swift in Sources */,

@@ -6,8 +6,8 @@ class GetClipsApi {
     
     var json : [[String: AnyObject]]?
     
-    init(personId: Int) {
-        if let url = NSURL(string: apiRoot + "clips?person_id=\(personId)"),
+    init(userId: Int) {
+        if let url = NSURL(string: apiRoot + "clips?user_id=\(userId)"),
                data = NSData(contentsOfURL: url) {
             self.json = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) as? [[String: AnyObject]]
         }

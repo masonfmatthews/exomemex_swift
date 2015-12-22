@@ -1,23 +1,15 @@
-//
-//  PostPersonApi.swift
-//  Memories
-//
-//  Created by Mason Matthews on 12/21/15.
-//  Copyright © 2015 Mason F. Matthews. All rights reserved.
-//
-
 import Foundation
 
-class PostPersonApi {
+class CreateUserApi {
     
     let apiRoot = "https://exomemex-api.herokuapp.com/api/v1/"
-    var person = Person(id:0, name: "Error")
+    var user = User(id:0, name: "Error")
 
-    init(personFields: Dictionary<String,String>, callback: (Person) -> Void) {
-        let request = NSMutableURLRequest(URL: NSURL(string: apiRoot + "people")!)
+    init(userFields: Dictionary<String,String>, callback: (User) -> Void) {
+        let request = NSMutableURLRequest(URL: NSURL(string: apiRoot + "users")!)
         request.HTTPMethod = "POST"
         
-        let params = ["person":personFields]
+        let params = ["user": userFields]
         
         do {
             request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: [])
@@ -37,9 +29,9 @@ class PostPersonApi {
             do {
                 let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
                 if let id = json["id"] as? Int, name = json["name"] as? String {
-                    self.person = Person(id: id, name: name)
+                    self.user = User(id: id, name: name)
                     Thread.runOnUIThread {
-                        callback(self.person)
+                        callback(self.user)
                     }
                 }
             } catch let parseError as NSError {

@@ -1,12 +1,12 @@
 import Foundation
 
-class GetPeopleApi {
+class GetUsersApi {
     
     let apiRoot = "https://exomemex-api.herokuapp.com/api/v1/"
     var json : [[String: AnyObject]]?
     
     init() {
-        if let url = NSURL(string: apiRoot + "people"),
+        if let url = NSURL(string: apiRoot + "users"),
                data = NSData(contentsOfURL: url) {
             self.json = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) as? [[String: AnyObject]]
         }
@@ -16,20 +16,8 @@ class GetPeopleApi {
         return self.json![0]["name"] as! String
     }
     
-    func getCountOfNames() -> Int {
+    func getCount() -> Int {
         return self.json!.count
     }
-    
-//    func getAllPeople() -> [Person] {
-//        if json {
-//            var people:[Person] = []
-//            for result in list {
-//                people.append(Person(id: result["id"] as! Int, name: result["name"] as! String))
-//            }
-//            return people
-//        } else {
-//            return []
-//        }
-//    }
     
 }

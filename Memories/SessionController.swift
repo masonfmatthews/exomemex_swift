@@ -19,7 +19,7 @@ final class SessionController {
     
     private init() {
         //TODO: login page!
-        session = Session(user: Person(id: 1, name:"Mason"))
+        session = Session(user: User(id: 1, name:"Mason"))
     }
     
 }

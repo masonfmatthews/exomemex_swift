@@ -19,6 +19,7 @@
 		B07AA65F1C29B85B00695F96 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65E1C29B85B00695F96 /* Person.swift */; };
 		B07AA6611C29CDC400695F96 /* OldClipsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6601C29CDC400695F96 /* OldClipsController.swift */; };
 		B07AA6631C29CE5F00695F96 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6621C29CE5F00695F96 /* Clip.swift */; };
+		B07AA6651C29D81200695F96 /* GetClipsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6641C29D81200695F96 /* GetClipsApi.swift */; };
 		B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172B1C24AF1B0011F0DB /* RecordViewController.swift */; };
 		B082172E1C24B30C0011F0DB /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */; };
 		B08217301C24B3A20011F0DB /* QuestionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */; };
@@ -61,6 +62,7 @@
 		B07AA65E1C29B85B00695F96 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B07AA6601C29CDC400695F96 /* OldClipsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldClipsController.swift; sourceTree = "<group>"; };
 		B07AA6621C29CE5F00695F96 /* Clip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
+		B07AA6641C29D81200695F96 /* GetClipsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetClipsApi.swift; sourceTree = "<group>"; };
 		B082172B1C24AF1B0011F0DB /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordViewController.swift; path = ../RecordViewController.swift; sourceTree = "<group>"; };
 		B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				B07AA65E1C29B85B00695F96 /* Person.swift */,
 				B07AA6601C29CDC400695F96 /* OldClipsController.swift */,
 				B07AA6621C29CE5F00695F96 /* Clip.swift */,
+				B07AA6641C29D81200695F96 /* GetClipsApi.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				B0FCCE171C28675E009FECB0 /* GetPeopleApi.swift in Sources */,
 				B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */,
 				B0561F3B1C24839E00213F33 /* ViewController.swift in Sources */,
+				B07AA6651C29D81200695F96 /* GetClipsApi.swift in Sources */,
 				B082172E1C24B30C0011F0DB /* QuestionsViewController.swift in Sources */,
 				B07AA65F1C29B85B00695F96 /* Person.swift in Sources */,
 				B0561F391C24839E00213F33 /* AppDelegate.swift in Sources */,

@@ -10,13 +10,13 @@ import UIKit
 
 class OldClipsController: UITableViewController {
     
-    var clips : [Clip] = [Clip(id: 1, name: "First Clip")]
+    var clips : [Clip] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Thread.runOnBackgroundThread {
-            //self.people = ApiInterface.getPeople()
+            self.clips = GetClipsApi().getAll()
             Thread.runOnUIThread(self.tableView.reloadData)
         }
     }

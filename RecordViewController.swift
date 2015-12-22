@@ -13,7 +13,7 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     @IBAction func resetRecording(sender: AnyObject) {
-        CreateUserApi(userFields: ["name": nameField.text!], callback: createUserCallback)
+        CreateUserApi(userFields: ["name": nameField.text!, "email": "test@test.com"], callback: createUserCallback)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

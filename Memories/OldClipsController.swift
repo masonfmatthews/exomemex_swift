@@ -10,12 +10,14 @@ import UIKit
 
 class OldClipsController: UITableViewController {
     
+    var session = SessionController.sharedController.session
     var clips : [Clip] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Thread.runOnBackgroundThread {
+            //session.user.id
             self.clips = GetClipsApi().getAll()
             Thread.runOnUIThread(self.tableView.reloadData)
         }

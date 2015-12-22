@@ -30,51 +30,23 @@ class PostPersonApi {
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request){
             (data,response,error) in
             
+            if error != nil {print("Error=\(error)"); return }
             guard let data = data else { print("No response received"); return }
             
-            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
             
-            if error != nil {
-                print("Error=\(error)")
-                return
-            }
-            print("response = \(response)")
-            print("responseString = \(responseString)")
-            self.person = Person(id: 1, name: "Me!!!!")
-            Thread.runOnUIThread {
-                callback(self.person)
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
+                if let id = json["id"] as? Int, name = json["name"] as? String {
+                    self.person = Person(id: id, name: name)
+                    Thread.runOnUIThread {
+                        callback(self.person)
+                    }
+                }
+            } catch let parseError as NSError {
+                print("Failed to load: \(parseError.localizedDescription)")
             }
         }
         
-//        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-//            print("Response: \(response)")
-//            let body = NSString(data: data!, encoding: NSUTF8StringEncoding)
-//            print("Body: \(body)")
-//            let err: NSError?
-//            var json : NSDictionary?
-//            do {
-//                json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
-//            }
-//            
-//            if(err != nil) {
-//                print(err!.localizedDescription)
-//                let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-//                print("Error could not parse JSON: '\(jsonStr)'")
-//            } else {
-//                if let parseJSON = json {
-//                    let id = parseJSON["id"] as? Int
-//                    print("Success!  New id: \(id)")
-//                    completionHandler(id!, personParams["name"]!)
-//                }
-//                else {
-//                    let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-//                    print("Error could not parse JSON: \(jsonStr)")
-//                }
-//            }
-//        })
-        
-        print("Request started.")
         task.resume()
-        print("Request done.")
     }
 }

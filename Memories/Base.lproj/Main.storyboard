@@ -95,6 +95,7 @@
         <!--Record View Controller-->
         <scene sceneID="llQ-zq-Xhf">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewF-nH-l9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Pzk-GN-SIr" customClass="RecordViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7g9-I8-Q8g"/>
@@ -105,8 +106,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9De-HB-Xkz">
-                                <rect key="frame" x="132" y="281" width="110" height="30"/>
-                                <state key="normal" title="Stop and Delete">
+                                <rect key="frame" x="113" y="281" width="149" height="30"/>
+                                <state key="normal" title="Delete and Start Over">
                                     <color key="titleColor" red="1" green="0.014148592377726477" blue="0.017517807034689969" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -128,6 +129,7 @@
                                 <rect key="frame" x="101" y="337" width="173" height="30"/>
                                 <state key="normal" title="Stop and Save Recording"/>
                                 <connections>
+                                    <action selector="saveRecording:" destination="Pzk-GN-SIr" eventType="touchUpInside" id="1mp-Xl-AT1"/>
                                     <segue destination="Aum-lq-c3u" kind="show" id="jHz-FS-WXB"/>
                                 </connections>
                             </button>
@@ -136,11 +138,8 @@
                     </view>
                     <connections>
                         <outlet property="nameField" destination="azC-5y-gWM" id="SvS-0p-v0B"/>
-                        <outlet property="nameLabel" destination="re8-sM-WeR" id="OqG-s0-Uvf"/>
-                        <outlet property="resetButton" destination="9De-HB-Xkz" id="3ed-ml-54G"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ewF-nH-l9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1237.5" y="663.5"/>
         </scene>
@@ -231,6 +230,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="U9Y-S1-8Pa"/>
+        <segue reference="jHz-FS-WXB"/>
     </inferredMetricsTieBreakers>
 </document>

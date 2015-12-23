@@ -1,12 +1,15 @@
 import UIKit
 
 class RecordViewController: UIViewController {
-    @IBOutlet weak var resetButton: UIButton!
+    
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBAction func resetRecording(sender: AnyObject) {
-        CreateUserApi(userFields: ["name": nameField.text!, "email": "test@test.com"], callback: createUserCallback)
+        self.nameField.text = ""
     }
+    @IBAction func saveRecording(sender: AnyObject) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,22 +21,15 @@ class RecordViewController: UIViewController {
         button.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
         
         view.addSubview(button)
-        let users = GetUsersApi()
-        nameLabel.text = "There are \(users.getCount()) names."
-        nameField.text = users.getFirstName()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func buttonPressed() {
         print("Round button pressed!")
-    }
-    
-    private func createUserCallback(user: User) {
-        self.nameLabel.text = "\(user.id)"
     }
     
 }

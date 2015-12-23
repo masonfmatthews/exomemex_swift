@@ -1,13 +1,14 @@
 import Foundation
 
-class GetClipsApi {
-    
-    let apiRoot = "https://exomemex-api.herokuapp.com/api/v1/"
+class GetClipsApi : Api {
     
     var json : [[String: AnyObject]]?
     
     init(userId: Int) {
-        if let url = NSURL(string: apiRoot + "clips?user_id=\(userId)"),
+        super.init()
+        
+        let urlString = self.domain + self.path + "clips?user_id=\(userId)&token=\(self.session.token!)"
+        if let url = NSURL(string: urlString),
                data = NSData(contentsOfURL: url) {
             self.json = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) as? [[String: AnyObject]]
         }

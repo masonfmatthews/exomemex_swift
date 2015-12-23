@@ -23,6 +23,7 @@
 		B07AA6691C29DB9E00695F96 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6681C29DB9E00695F96 /* SessionController.swift */; };
 		B07AA66B1C2B21F300695F96 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA66A1C2B21F300695F96 /* LoginController.swift */; };
 		B07AA66D1C2B235C00695F96 /* AuthenticateApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA66C1C2B235C00695F96 /* AuthenticateApi.swift */; };
+		B07AA6741C2B4A1D00695F96 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6731C2B4A1D00695F96 /* Api.swift */; };
 		B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172B1C24AF1B0011F0DB /* RecordViewController.swift */; };
 		B0FCCE171C28675E009FECB0 /* GetUsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* GetUsersApi.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		B07AA6681C29DB9E00695F96 /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		B07AA66A1C2B21F300695F96 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B07AA66C1C2B235C00695F96 /* AuthenticateApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateApi.swift; sourceTree = "<group>"; };
+		B07AA6731C2B4A1D00695F96 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		B082172B1C24AF1B0011F0DB /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordViewController.swift; path = ../RecordViewController.swift; sourceTree = "<group>"; };
 		B0FCCE161C28675E009FECB0 /* GetUsersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUsersApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 		B07AA6701C2B43F300695F96 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				B07AA6731C2B4A1D00695F96 /* Api.swift */,
 				B07AA66C1C2B235C00695F96 /* AuthenticateApi.swift */,
 				B07AA6641C29D81200695F96 /* GetClipsApi.swift */,
 				B0FCCE161C28675E009FECB0 /* GetUsersApi.swift */,
@@ -325,6 +328,7 @@
 				B0561F391C24839E00213F33 /* AppDelegate.swift in Sources */,
 				B07AA65D1C29B58C00695F96 /* Thread.swift in Sources */,
 				B07AA6611C29CDC400695F96 /* OldClipsController.swift in Sources */,
+				B07AA6741C2B4A1D00695F96 /* Api.swift in Sources */,
 				B07AA6631C29CE5F00695F96 /* Clip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

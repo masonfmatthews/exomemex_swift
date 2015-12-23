@@ -1,15 +1,16 @@
 import Foundation
 
-class CreateUserApi {
+class CreateUserApi : Api {
     
-    let apiRoot = "https://exomemex-api.herokuapp.com/api/v1/"
     var user = User(id:0, name: "Error")
 
     init(userFields: Dictionary<String,String>, callback: (User) -> Void) {
-        let request = NSMutableURLRequest(URL: NSURL(string: apiRoot + "users")!)
+        super.init()
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: self.domain + self.path + "users")!)
         request.HTTPMethod = "POST"
         
-        let params = ["user": userFields]
+        let params = ["user": userFields, "token": self.session.token!]
         
         do {
             request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: [])

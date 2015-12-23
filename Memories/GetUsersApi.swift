@@ -1,12 +1,13 @@
 import Foundation
 
-class GetUsersApi {
+class GetUsersApi : Api {
     
-    let apiRoot = "https://exomemex-api.herokuapp.com/api/v1/"
     var json : [[String: AnyObject]]?
     
-    init() {
-        if let url = NSURL(string: apiRoot + "users"),
+    override init() {
+        super.init()
+        
+        if let url = NSURL(string: self.domain + self.path + "users?token=\(self.session.token!)"),
                data = NSData(contentsOfURL: url) {
             self.json = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) as? [[String: AnyObject]]
         }

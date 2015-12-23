@@ -1,14 +1,13 @@
 import Foundation
 
-class AuthenticateApi {
-    
-    var token : String?
+final class AuthenticateApi : Api {
     
     init(email: String, password: String, callback: (String?) -> Void) {
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://exomemex-api.herokuapp.com/login")!)
-        request.HTTPMethod = "POST"
+        super.init()
         
+        let request = NSMutableURLRequest(URL: NSURL(string: self.domain + "login")!)
         let params = ["email": email, "password": password]
+        request.HTTPMethod = "POST"
         
         do {
             request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: [])
@@ -26,10 +25,10 @@ class AuthenticateApi {
             
             do {
                 let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
-                if let token = json["token"] as? String {
-                    self.token = token
+                if let returnedToken = json["token"] as? String {
+                    self.session.token = returnedToken
                     Thread.runOnUIThread {
-                        callback(self.token)
+                        callback(self.session.token)
                     }
                 }
             } catch {

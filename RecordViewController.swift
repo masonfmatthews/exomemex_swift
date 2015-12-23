@@ -7,7 +7,7 @@ class RecordViewController: UIViewController {
         self.nameField.text = ""
     }
     @IBAction func saveRecording(sender: AnyObject) {
-        
+        CreateClipApi(clipFields: ["name" : nameField.text!])
     }
     
     override func viewDidLoad() {

@@ -259,16 +259,17 @@
                         <outlet property="emailField" destination="Uos-r2-OFz" id="TSv-eY-sBc"/>
                         <outlet property="errorLabel" destination="l2L-w5-aMX" id="dJI-uD-1eV"/>
                         <outlet property="passwordField" destination="zOL-u4-8Mx" id="C9p-Rs-7m4"/>
+                        <segue destination="Aum-lq-c3u" kind="show" identifier="loginSegue" id="U9Y-S1-8Pa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91J-OP-VS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-230.5" y="663.5"/>
+            <point key="canvasLocation" x="-189.5" y="663.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="rpb-ki-Kmm">
             <objects>
-                <navigationController id="Aum-lq-c3u" sceneMemberID="viewController">
+                <navigationController id="Aum-lq-c3u" customClass="MainNavigationController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IRu-ei-ndu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -284,6 +285,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="U9Y-S1-8Pa"/>
         <segue reference="K0d-6o-Raa"/>
     </inferredMetricsTieBreakers>
 </document>

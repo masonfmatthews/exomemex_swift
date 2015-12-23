@@ -24,7 +24,8 @@ class LoginController: UIViewController {
         if token == nil {
             self.errorLabel.text = "Incorrect Email or Password"
         } else {
-            self.errorLabel.text = token
+            SessionController.sharedController.session.token = token
+            performSegueWithIdentifier("loginSegue", sender: nil)
         }
         
     }

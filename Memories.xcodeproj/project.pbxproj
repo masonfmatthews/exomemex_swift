@@ -24,6 +24,7 @@
 		B07AA6691C29DB9E00695F96 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6681C29DB9E00695F96 /* SessionController.swift */; };
 		B07AA66B1C2B21F300695F96 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA66A1C2B21F300695F96 /* LoginController.swift */; };
 		B07AA66D1C2B235C00695F96 /* AuthenticateApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA66C1C2B235C00695F96 /* AuthenticateApi.swift */; };
+		B07AA66F1C2B41CF00695F96 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA66E1C2B41CF00695F96 /* MainNavigationController.swift */; };
 		B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172B1C24AF1B0011F0DB /* RecordViewController.swift */; };
 		B082172E1C24B30C0011F0DB /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */; };
 		B08217301C24B3A20011F0DB /* QuestionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */; };
@@ -71,6 +72,7 @@
 		B07AA6681C29DB9E00695F96 /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		B07AA66A1C2B21F300695F96 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B07AA66C1C2B235C00695F96 /* AuthenticateApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateApi.swift; sourceTree = "<group>"; };
+		B07AA66E1C2B41CF00695F96 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		B082172B1C24AF1B0011F0DB /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordViewController.swift; path = ../RecordViewController.swift; sourceTree = "<group>"; };
 		B082172D1C24B30C0011F0DB /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		B082172F1C24B3A20011F0DB /* QuestionsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				B07AA6681C29DB9E00695F96 /* SessionController.swift */,
 				B07AA66A1C2B21F300695F96 /* LoginController.swift */,
 				B07AA66C1C2B235C00695F96 /* AuthenticateApi.swift */,
+				B07AA66E1C2B41CF00695F96 /* MainNavigationController.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */,
 				B0561F3B1C24839E00213F33 /* ViewController.swift in Sources */,
 				B07AA6651C29D81200695F96 /* GetClipsApi.swift in Sources */,
+				B07AA66F1C2B41CF00695F96 /* MainNavigationController.swift in Sources */,
 				B082172E1C24B30C0011F0DB /* QuestionsViewController.swift in Sources */,
 				B07AA66D1C2B235C00695F96 /* AuthenticateApi.swift in Sources */,
 				B07AA6671C29DB5F00695F96 /* Session.swift in Sources */,

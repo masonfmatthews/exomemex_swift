@@ -1,6 +1,6 @@
 import Foundation
 
-class CreateUserApi : Api {
+final class CreateUserApi : Api {
     
     var user = User(id:0, name: "Error")
 

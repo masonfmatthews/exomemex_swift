@@ -1,6 +1,6 @@
 import Foundation
 
-class GetClipsApi : Api {
+final class GetClipsApi : Api {
     
     var json : [[String: AnyObject]]?
     

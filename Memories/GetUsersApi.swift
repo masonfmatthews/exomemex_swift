@@ -1,6 +1,6 @@
 import Foundation
 
-class GetUsersApi : Api {
+final class GetUsersApi : Api {
     
     var json : [[String: AnyObject]]?
     

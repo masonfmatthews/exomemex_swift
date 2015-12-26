@@ -22,7 +22,7 @@ final class CreateClipApi : Api {
             (data,response,error) in
             
             if error != nil {print("Error=\(error)"); return }
-            guard let data = data else { print("No response received"); return }
+            guard let _ = data else { print("No response received"); return }
             
             //do {
             //    let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]

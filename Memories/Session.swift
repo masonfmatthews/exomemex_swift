@@ -1,10 +1,6 @@
 import Foundation
 
 struct Session {
-    let user: User
+    var id:Int?
     var token:String?
-    
-    init(user: User) {
-        self.user = user
-    }
 }

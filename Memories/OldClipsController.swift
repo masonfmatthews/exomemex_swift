@@ -17,7 +17,7 @@ class OldClipsController: UITableViewController {
         super.viewDidLoad()
         
         Thread.runOnBackgroundThread {
-            self.clips = GetClipsApi(userId: self.session.user.id).getAll()
+            self.clips = GetClipsApi(userId: self.session.id!).getAll()
             Thread.runOnUIThread(self.tableView.reloadData)
         }
     }

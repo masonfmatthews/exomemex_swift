@@ -27,6 +27,7 @@ final class AuthenticateApi : Api {
                 let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
                 if let returnedToken = json["token"] as? String {
                     self.session.token = returnedToken
+                    self.session.id = json["id"] as? Int
                     Thread.runOnUIThread {
                         callback(self.session.token)
                     }

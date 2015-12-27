@@ -6,7 +6,7 @@ class LoginController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     @IBAction func authenticate(sender: AnyObject) {
-        AuthenticateApi(email: self.emailField.text!,
+        var _ = AuthenticateApi(email: self.emailField.text!,
                 password: self.passwordField.text!,
                 callback: loginCallback)
         
@@ -14,6 +14,8 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SessionController.sharedController.session.token = nil
+        SessionController.sharedController.session.id = nil
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,7 +26,6 @@ class LoginController: UIViewController {
         if token == nil {
             self.errorLabel.text = "Incorrect Email or Password"
         } else {
-            SessionController.sharedController.session.token = token
             performSegueWithIdentifier("loginSegue", sender: nil)
         }
         

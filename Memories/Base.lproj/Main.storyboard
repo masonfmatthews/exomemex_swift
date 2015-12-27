@@ -37,14 +37,23 @@
                                     <segue destination="ZH2-TG-oyS" kind="show" id="IOz-xE-duB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivm-Mh-git">
+                                <rect key="frame" x="160" y="358" width="55" height="30"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <segue destination="5KW-Ap-eq4" kind="show" id="PAF-PE-Fzk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pcb-Df-xE1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7lq-Wn-Ng4"/>
                             <constraint firstItem="pcb-Df-xE1" firstAttribute="top" secondItem="U8J-1N-Qgs" secondAttribute="bottom" constant="51" id="EID-UY-GM2"/>
+                            <constraint firstItem="Ivm-Mh-git" firstAttribute="top" secondItem="pcb-Df-xE1" secondAttribute="bottom" constant="58" id="Oi2-1x-Osj"/>
                             <constraint firstItem="U8J-1N-Qgs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dll-a8-YMk"/>
                             <constraint firstItem="U8J-1N-Qgs" firstAttribute="top" secondItem="2iF-IT-WSe" secondAttribute="bottom" constant="53" id="flF-Fw-yRJ"/>
                             <constraint firstItem="2iF-IT-WSe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pNH-mr-nBY"/>
+                            <constraint firstItem="Ivm-Mh-git" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qTV-4m-geY"/>
                             <constraint firstItem="2iF-IT-WSe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="vFE-TZ-Q5S"/>
                         </constraints>
                     </view>

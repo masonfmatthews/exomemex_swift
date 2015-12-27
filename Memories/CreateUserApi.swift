@@ -2,7 +2,7 @@ import Foundation
 
 final class CreateUserApi : Api {
     
-    var user = User(id:0, name: "Error")
+    var user = User(id:0, name: "Error", email: "email")
 
     init(userFields: Dictionary<String,String>, callback: (User) -> Void) {
         super.init()
@@ -30,7 +30,7 @@ final class CreateUserApi : Api {
             do {
                 let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
                 if let id = json["id"] as? Int, name = json["name"] as? String {
-                    self.user = User(id: id, name: name)
+                    self.user = User(id: id, name: name, email: "email")
                     Thread.runOnUIThread {
                         callback(self.user)
                     }

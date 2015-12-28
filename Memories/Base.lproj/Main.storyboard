@@ -41,7 +41,7 @@
                                 <rect key="frame" x="160" y="358" width="55" height="30"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
-                                    <segue destination="5KW-Ap-eq4" kind="show" id="PAF-PE-Fzk"/>
+                                    <segue destination="5KW-Ap-eq4" kind="show" animates="NO" action="showDetailViewController:sender:" id="PAF-PE-Fzk"/>
                                 </connections>
                             </button>
                         </subviews>

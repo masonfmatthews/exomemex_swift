@@ -22,11 +22,13 @@ class LoginController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    private func loginCallback(token: String?) {
-        if token == nil {
-            self.errorLabel.text = "Incorrect Email or Password"
-        } else {
+    private func loginCallback(response: Bool?) {
+        if response == nil {
+            self.errorLabel.text = "Server is Not Responding"
+        } else if response! {
             performSegueWithIdentifier("loginSegue", sender: nil)
+        } else {
+            self.errorLabel.text = "Incorrect Email or Password"
         }
         
     }

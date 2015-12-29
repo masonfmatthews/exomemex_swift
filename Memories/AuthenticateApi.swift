@@ -2,7 +2,7 @@ import Foundation
 
 final class AuthenticateApi : Api {
     
-    init(email: String, password: String, callback: (String?) -> Void) {
+    init(email: String, password: String, callback: (Bool?) -> Void) {
         super.init()
         
         let request = NSMutableURLRequest(URL: NSURL(string: self.domain + "login")!)
@@ -25,16 +25,18 @@ final class AuthenticateApi : Api {
             
             do {
                 let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
-                if let returnedToken = json["token"] as? String {
-                    self.session.token = returnedToken
-                    self.session.id = json["id"] as? Int
+                if let returnedId = json["id"] as? Int, let returnedToken = json["token"] as? String {
                     Thread.runOnUIThread {
-                        callback(self.session.token)
+                        SessionController.sharedController.session.id = returnedId
+                        SessionController.sharedController.session.token = returnedToken
+                        callback(true)
                     }
+                } else {
+                    callback(nil)
                 }
             } catch {
                 Thread.runOnUIThread {
-                    callback(nil)
+                    callback(false)
                 }
             }
         }

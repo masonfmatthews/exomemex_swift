@@ -26,6 +26,7 @@
 		B07AA6741C2B4A1D00695F96 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6731C2B4A1D00695F96 /* Api.swift */; };
 		B07AA6761C2B511200695F96 /* CreateClipApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6751C2B511200695F96 /* CreateClipApi.swift */; };
 		B07AA6781C35986600695F96 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6771C35986600695F96 /* Extensions.swift */; };
+		B07AA67A1C35A99700695F96 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA6791C35A99700695F96 /* LandingController.swift */; };
 		B082172C1C24AF1B0011F0DB /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172B1C24AF1B0011F0DB /* RecordViewController.swift */; };
 		B0FCCE171C28675E009FECB0 /* GetUsersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* GetUsersApi.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		B07AA6731C2B4A1D00695F96 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		B07AA6751C2B511200695F96 /* CreateClipApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateClipApi.swift; sourceTree = "<group>"; };
 		B07AA6771C35986600695F96 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B07AA6791C35A99700695F96 /* LandingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		B082172B1C24AF1B0011F0DB /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordViewController.swift; path = ../RecordViewController.swift; sourceTree = "<group>"; };
 		B0FCCE161C28675E009FECB0 /* GetUsersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUsersApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				B0561F381C24839E00213F33 /* AppDelegate.swift */,
 				B07AA6681C29DB9E00695F96 /* SessionController.swift */,
 				B07AA66A1C2B21F300695F96 /* LoginController.swift */,
+				B07AA6791C35A99700695F96 /* LandingController.swift */,
 				B07AA6601C29CDC400695F96 /* OldClipsController.swift */,
 				B082172B1C24AF1B0011F0DB /* RecordViewController.swift */,
 			);
@@ -334,6 +337,7 @@
 				B07AA6671C29DB5F00695F96 /* Session.swift in Sources */,
 				B07AA65F1C29B85B00695F96 /* User.swift in Sources */,
 				B0561F391C24839E00213F33 /* AppDelegate.swift in Sources */,
+				B07AA67A1C35A99700695F96 /* LandingController.swift in Sources */,
 				B07AA65D1C29B58C00695F96 /* Thread.swift in Sources */,
 				B07AA6611C29CDC400695F96 /* OldClipsController.swift in Sources */,
 				B07AA6741C2B4A1D00695F96 /* Api.swift in Sources */,

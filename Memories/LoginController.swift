@@ -14,8 +14,7 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SessionController.sharedController.session.token = nil
-        SessionController.sharedController.session.id = nil
+        SessionController.sharedController.removeIdAndToken()
     }
     
     override func didReceiveMemoryWarning() {

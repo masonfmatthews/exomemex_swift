@@ -45,7 +45,6 @@ final class CreateClipApi : Api {
         
         request.HTTPBody = body
         
-        
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request){
             (data,response,error) in
             

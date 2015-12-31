@@ -27,8 +27,9 @@ final class AuthenticateApi : Api {
                 let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
                 if let returnedId = json["id"] as? Int, let returnedToken = json["token"] as? String {
                     Thread.runOnUIThread {
-                        SessionController.sharedController.session.id = returnedId
-                        SessionController.sharedController.session.token = returnedToken
+                        // TODO: WTF?  Why do I have to give only one of the paramaters a keyword?
+                        SessionController.sharedController.setIdAndToken(returnedId, token: returnedToken)
+                        
                         callback(true)
                     }
                 } else {

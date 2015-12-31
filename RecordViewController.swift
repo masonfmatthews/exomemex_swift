@@ -9,10 +9,11 @@ class RecordViewController: UIViewController {
     }
     @IBAction func saveRecording(sender: AnyObject) {
         self.audioRecorder!.stop()
-        let _ = CreateClipApi(clipFields: ["name" : nameField.text!])
+        let _ = CreateClipApi(clipFields: ["name" : nameField.text!], path: filePath!)
         //TODO: Later, display something different if the API returns an error.
     }
     
+    var filePath : String?
     var audioRecorder : AVAudioRecorder?
     
     override func viewDidLoad() {
@@ -49,7 +50,8 @@ class RecordViewController: UIViewController {
                     
                     //get documnets directory
                     let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-                    let url = NSURL.fileURLWithPath(documentsDirectory + "/voiceRecording.wav")
+                    self.filePath = documentsDirectory + "/voiceRecording.wav"
+                    let url = NSURL.fileURLWithPath(self.filePath!)
                     
                     print(url)
                     

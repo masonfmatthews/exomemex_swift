@@ -5,7 +5,7 @@ class RecordViewController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
     @IBAction func resetRecording(sender: AnyObject) {
-        self.nameField.text = ""
+        self.audioRecorder!.deleteRecording()
     }
     @IBAction func saveRecording(sender: AnyObject) {
         self.audioRecorder!.stop()
@@ -19,14 +19,28 @@ class RecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //TODO: Are buttons a really lame way to make this work?
         let button = UIButton(type: .Custom) as UIButton
-        button.frame = CGRectMake(160, 100, 50, 50)
+        button.frame = CGRectMake(165, 205, 40, 40)
         button.backgroundColor = UIColor(red: 200, green: 0, blue: 0, alpha: 1)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        // button.setImage(UIImage(named:"thumbsUp.png"), forState: .Normal)
         button.addTarget(self, action: "record", forControlEvents: .TouchUpInside)
-        
         view.addSubview(button)
+        
+        let buttonBorder = UIButton(type: .Custom) as UIButton
+        buttonBorder.frame = CGRectMake(150, 190, 70, 70)
+        buttonBorder.backgroundColor = UIColor.clearColor()
+        buttonBorder.layer.borderColor = UIColor.blackColor().CGColor
+        buttonBorder.layer.borderWidth = 1
+        buttonBorder.layer.cornerRadius = 0.5 * buttonBorder.bounds.size.width
+        buttonBorder.addTarget(self, action: "record", forControlEvents: .TouchUpInside)
+        view.addSubview(buttonBorder)
+        
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .MediumStyle
+        formatter.timeStyle = .ShortStyle
+        
+        self.nameField.text = formatter.stringFromDate(NSDate())
         
     }
     

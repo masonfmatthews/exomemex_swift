@@ -4,8 +4,14 @@ import AVFoundation
 class RecordViewController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     @IBAction func resetRecording(sender: AnyObject) {
+        print("Recording stopped and deleted!")
         self.audioRecorder!.deleteRecording()
+        
+        self.resetButton.enabled = false
+        self.saveButton.enabled = false
     }
     @IBAction func saveRecording(sender: AnyObject) {
         self.audioRecorder!.stop()
@@ -19,7 +25,10 @@ class RecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //TODO: Are buttons a really lame way to make this work?
+        self.resetButton.enabled = false
+        self.saveButton.enabled = false
+        
+        //TODO: Are buttons a really lame way to make this record button look nice?
         let button = UIButton(type: .Custom) as UIButton
         button.frame = CGRectMake(165, 205, 40, 40)
         button.backgroundColor = UIColor(red: 200, green: 0, blue: 0, alpha: 1)
@@ -56,7 +65,7 @@ class RecordViewController: UIViewController {
         if (audioSession.respondsToSelector("requestRecordPermission:")) {
             AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
                 if granted {
-                    print("granted")
+                    //print("granted")
                     
                     //set category and activate recorder session
                     try! audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -67,7 +76,7 @@ class RecordViewController: UIViewController {
                     self.filePath = documentsDirectory + "/voiceRecording.wav"
                     let url = NSURL.fileURLWithPath(self.filePath!)
                     
-                    print(url)
+                    //print(url)
                     
                     //create AnyObject of settings
                     let settings: [String : AnyObject] = [
@@ -83,8 +92,11 @@ class RecordViewController: UIViewController {
                     try! self.audioRecorder = AVAudioRecorder(URL: url, settings: settings)
                     self.audioRecorder!.record()
                     
+                    self.resetButton.enabled = true
+                    self.saveButton.enabled = true
+                    
                 } else{
-                    print("not granted")
+                    print("Permission not granted!")
                 }
             })
         }

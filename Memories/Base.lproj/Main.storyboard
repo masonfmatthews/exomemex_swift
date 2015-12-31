@@ -120,6 +120,9 @@
                                 <state key="normal" title="Delete and Start Over">
                                     <color key="titleColor" red="1" green="0.014148592377726477" blue="0.017517807034689969" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="resetRecording:" destination="Pzk-GN-SIr" eventType="touchUpInside" id="iay-74-Rhl"/>
                                 </connections>
@@ -127,6 +130,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCM-c8-zw5">
                                 <rect key="frame" x="101" y="337" width="173" height="30"/>
                                 <state key="normal" title="Stop and Save Recording"/>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="saveRecording:" destination="Pzk-GN-SIr" eventType="touchUpInside" id="1mp-Xl-AT1"/>
                                     <segue destination="Aum-lq-c3u" kind="show" id="jHz-FS-WXB"/>
@@ -148,6 +154,8 @@
                     </view>
                     <connections>
                         <outlet property="nameField" destination="azC-5y-gWM" id="SvS-0p-v0B"/>
+                        <outlet property="resetButton" destination="9De-HB-Xkz" id="FJN-a2-Skj"/>
+                        <outlet property="saveButton" destination="iCM-c8-zw5" id="n1f-qx-VYG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewF-nH-l9d" userLabel="First Responder" sceneMemberID="firstResponder"/>

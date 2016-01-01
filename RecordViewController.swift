@@ -48,7 +48,6 @@ class RecordViewController: UIViewController {
         let formatter = NSDateFormatter()
         formatter.dateStyle = .MediumStyle
         formatter.timeStyle = .ShortStyle
-        
         self.nameField.text = formatter.stringFromDate(NSDate())
         
     }

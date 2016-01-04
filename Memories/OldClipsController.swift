@@ -26,7 +26,7 @@ class OldClipsController: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let clip = clips[indexPath.row]
                 let controller = segue.destinationViewController as! PlayClipController
-                controller.detailItem = clip
+                controller.clip = clip
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }

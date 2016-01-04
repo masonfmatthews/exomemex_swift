@@ -4,10 +4,10 @@ final class GetClipsApi : Api {
     
     var json : [[String: AnyObject]]?
     
-    init(userId: Int) {
+    override init() {
         super.init()
         
-        let urlString = self.domain + self.path + "clips?user_id=\(userId)&token=\(self.session.token!)"
+        let urlString = self.domain + self.path + "clips?token=\(self.session.token!)"
         if let url = NSURL(string: urlString),
                data = NSData(contentsOfURL: url) {
             self.json = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) as? [[String: AnyObject]]

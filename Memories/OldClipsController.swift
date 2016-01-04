@@ -21,6 +21,18 @@ class OldClipsController: UITableViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showClip" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let clip = clips[indexPath.row]
+                let controller = segue.destinationViewController as! PlayClipController
+                controller.detailItem = clip
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

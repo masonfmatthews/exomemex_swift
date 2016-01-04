@@ -91,6 +91,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="TnH-If-P0H" kind="show" identifier="showClip" id="9H1-jz-l2w"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -102,6 +105,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k88-fn-3um" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="765.5" y="1502.5"/>
+        </scene>
+        <!--Play Clip Controller-->
+        <scene sceneID="ZqD-si-7TN">
+            <objects>
+                <viewController id="TnH-If-P0H" customClass="PlayClipController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ajv-oY-1BD"/>
+                        <viewControllerLayoutGuide type="bottom" id="UId-df-q47"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dsW-qE-hAH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVI-19-2xk">
+                                <rect key="frame" x="166" y="291" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tempLabel" destination="zVI-19-2xk" id="5yR-Z6-Jb2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpu-eM-xQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345.5" y="1502.5"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="llQ-zq-Xhf">

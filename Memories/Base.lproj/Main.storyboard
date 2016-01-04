@@ -37,8 +37,15 @@
                                     <segue destination="ZH2-TG-oyS" kind="show" id="IOz-xE-duB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cQ-Qw-suo">
+                                <rect key="frame" x="77" y="349" width="220" height="30"/>
+                                <state key="normal" title="Add/Remove Friends and Family"/>
+                                <connections>
+                                    <segue destination="XxL-ve-uZR" kind="show" id="EaT-Is-VuB"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivm-Mh-git">
-                                <rect key="frame" x="160" y="358" width="55" height="30"/>
+                                <rect key="frame" x="160" y="549" width="55" height="30"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <segue destination="5KW-Ap-eq4" kind="show" identifier="logoutSegue" animates="NO" action="showDetailViewController:sender:" id="PAF-PE-Fzk"/>
@@ -49,7 +56,9 @@
                         <constraints>
                             <constraint firstItem="pcb-Df-xE1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7lq-Wn-Ng4"/>
                             <constraint firstItem="pcb-Df-xE1" firstAttribute="top" secondItem="U8J-1N-Qgs" secondAttribute="bottom" constant="51" id="EID-UY-GM2"/>
-                            <constraint firstItem="Ivm-Mh-git" firstAttribute="top" secondItem="pcb-Df-xE1" secondAttribute="bottom" constant="58" id="Oi2-1x-Osj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ivm-Mh-git" secondAttribute="bottom" constant="88" id="WeO-v1-oDc"/>
+                            <constraint firstItem="4cQ-Qw-suo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YlR-M9-kVp"/>
+                            <constraint firstItem="4cQ-Qw-suo" firstAttribute="top" secondItem="pcb-Df-xE1" secondAttribute="bottom" constant="49" id="aMy-fn-4Dl"/>
                             <constraint firstItem="U8J-1N-Qgs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dll-a8-YMk"/>
                             <constraint firstItem="U8J-1N-Qgs" firstAttribute="top" secondItem="2iF-IT-WSe" secondAttribute="bottom" constant="53" id="flF-Fw-yRJ"/>
                             <constraint firstItem="2iF-IT-WSe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pNH-mr-nBY"/>
@@ -287,6 +296,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KX6-bn-Fyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="315.5" y="663.5"/>
+        </scene>
+        <!--Listeners Controller-->
+        <scene sceneID="DXX-Uk-hwv">
+            <objects>
+                <tableViewController id="XxL-ve-uZR" customClass="ListenersController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="edG-VZ-feW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="2pW-nF-cAs" style="IBUITableViewCellStyleDefault" id="j5A-0X-U8Q">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j5A-0X-U8Q" id="QbZ-U4-n5X">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pW-nF-cAs">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XxL-ve-uZR" id="Q7W-qC-WFz"/>
+                            <outlet property="delegate" destination="XxL-ve-uZR" id="P9I-ZO-HKI"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xnu-fJ-m3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765.5" y="-115.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

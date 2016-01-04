@@ -8,7 +8,7 @@ class PlayClipController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tempLabel.text = detailItem!.name
+        tempLabel.text = detailItem!.url
     }
     
     override func didReceiveMemoryWarning() {

@@ -8,13 +8,13 @@ class PlayClipController: UIViewController {
     
     @IBOutlet weak var playButton: UIButton!
     @IBAction func playClip(sender: AnyObject) {
-//        self.player.play()
+        self.player.play()
     }
     
     @IBOutlet weak var stopButton: UIButton!
     @IBAction func stopClip(sender: AnyObject) {
-        //self.player.stop()
-
+        self.player.pause()
+        //self.player.seekToTime(CMTime(seconds: 0, preferredTimescale: 1))
     }
     
     override func viewDidLoad() {
@@ -23,7 +23,6 @@ class PlayClipController: UIViewController {
         
         let playerItem = AVPlayerItem(URL: url!)
         self.player = AVPlayer(playerItem: playerItem)
-        self.player.rate = 1.0;
     }
     
     override func didReceiveMemoryWarning() {

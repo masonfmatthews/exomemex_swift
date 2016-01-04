@@ -1,13 +1,13 @@
 import Foundation
 
-final class CreateUserApi : Api {
+final class CreateListenerApi : Api {
     
     var user = User(id:0, name: "Error", email: "email")
 
     init(userFields: Dictionary<String,String>, callback: (User) -> Void) {
         super.init()
         
-        let request = NSMutableURLRequest(URL: NSURL(string: self.domain + self.path + "users")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: self.domain + self.path + "listeners")!)
         request.HTTPMethod = "POST"
         
         let params = ["user": userFields, "token": self.session.token!]
@@ -24,20 +24,7 @@ final class CreateUserApi : Api {
             (data,response,error) in
             
             if error != nil {print("Error=\(error)"); return }
-            guard let data = data else { print("No response received"); return }
-            
-            
-            do {
-                let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
-                if let id = json["id"] as? Int, name = json["name"] as? String {
-                    self.user = User(id: id, name: name, email: "email")
-                    Thread.runOnUIThread {
-                        callback(self.user)
-                    }
-                }
-            } catch let parseError as NSError {
-                print("Failed to load: \(parseError.localizedDescription)")
-            }
+            guard let _ = data else { print("No response received"); return }
         }
         
         task.resume()

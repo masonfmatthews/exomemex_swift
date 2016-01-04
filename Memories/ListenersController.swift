@@ -30,7 +30,6 @@ class ListenersController: UITableViewController {
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         alert.addAction(cancelAction)
         
-        //Create and an option action
         let nextAction: UIAlertAction = UIAlertAction(title: "Add", style: .Default) { action -> Void in
             //NEXT TODO: Do stuff
         }

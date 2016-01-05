@@ -2,13 +2,17 @@ import Foundation
 
 final class CreateClipApi : Api {
     
-    init(clipFields: Dictionary<String,String>, path: String) {
+    init(clipFields: Dictionary<String,String>, listenerIds: [Int], path: String) {
         super.init()
         
         let request = NSMutableURLRequest(URL: NSURL(string: self.domain + self.path + "clips")!)
         request.HTTPMethod = "POST"
+        var listenerDict = Dictionary<String,String>()
+        for id in listenerIds {
+            listenerDict["\(id)"] = "true"
+        }
         
-        let params = ["clip": clipFields, "token": self.session.token!]
+        let params = ["clip": clipFields, "token": self.session.token!, "listeners": listenerDict ]
         
         let boundary = "Boundary-\(NSUUID().UUIDString)"
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")

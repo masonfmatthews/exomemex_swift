@@ -18,6 +18,8 @@ class ListenersController: UITableViewController {
         }
     }
     
+    //TODO Allow for editing of family members.
+    
     func newListener(sender: AnyObject) {
         let alert = UIAlertController(title: "Add Friend/Family", message: "Please enter name and e-mail address.", preferredStyle: .Alert)
         

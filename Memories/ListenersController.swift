@@ -1,21 +1,15 @@
-//
-//  OldClipsController.swift
-//  Memories
-//
-//  Created by Mason Matthews on 12/22/15.
-//  Copyright © 2015 Mason F. Matthews. All rights reserved.
-//
-
 import UIKit
 
 class ListenersController: UITableViewController {
     
     var session = SessionController.sharedController.session
     var listeners : [User] = []
+    var newNameField = UITextField()
+    var newEmailField = UITextField()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        //self.navigationItem.leftBarButtonItem = self.editButtonItem() //Wipes out the back button.
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newListener:")
         self.navigationItem.rightBarButtonItem = addButton
         Thread.runOnBackgroundThread {
@@ -31,31 +25,35 @@ class ListenersController: UITableViewController {
         alert.addAction(cancelAction)
         
         let nextAction: UIAlertAction = UIAlertAction(title: "Add", style: .Default) { action -> Void in
-            //NEXT TODO: Do stuff
+            let _ = CreateListenerApi(userFields: ["name": self.newNameField.text!, "email": self.newEmailField.text!],
+                callback: { newListener -> Void in
+                    if newListener == nil {
+                        //TODO: Make this visible to the user.
+                        print("Invalid name or e-mail address!")
+                    } else {
+                        self.listeners.append(newListener!)
+                        self.listeners.sortInPlace({ p1, p2 in p1.name < p2.name })
+                        self.tableView.reloadData()
+                    }
+                }
+            )
         }
         
         alert.addAction(nextAction)
         
         //Add text fields
-        alert.addTextFieldWithConfigurationHandler { textField -> Void in
-            textField.placeholder = "Name"
+        alert.addTextFieldWithConfigurationHandler { field -> Void in
+            field.placeholder = "Name"
+            self.newNameField = field
         }
-        alert.addTextFieldWithConfigurationHandler { textField -> Void in
-            textField.placeholder = "Email"
+        alert.addTextFieldWithConfigurationHandler { field -> Void in
+            field.placeholder = "Email"
+            self.newEmailField = field
         }
         
         //Present the AlertController
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    
-//    func addCompletionHandler(id: Int, name: String, email: String) {
-//        let newListener = User(id: id, name: name, email: email)
-//        Thread.runOnUIThread {
-//            self.listeners.append(newListener)
-//            self.listeners.sortInPlace({ p1, p2 in p1.name < p2.name })
-//            self.tableView.reloadData()
-//        }
-//    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -69,7 +67,7 @@ class ListenersController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         let listener = listeners[indexPath.row]
-        cell.textLabel!.text = "\(listener.name): (\(listener.email))"
+        cell.textLabel!.text = "\(listener.name) (\(listener.email))"
         return cell
     }
     

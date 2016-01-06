@@ -13,6 +13,7 @@
 		B0561F431C24839E00213F33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0561F411C24839E00213F33 /* LaunchScreen.storyboard */; };
 		B0561F4E1C24839E00213F33 /* MemoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F4D1C24839E00213F33 /* MemoriesTests.swift */; };
 		B0561F591C24839E00213F33 /* MemoriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F581C24839E00213F33 /* MemoriesUITests.swift */; };
+		B0611E621C3D6F6200BBFD22 /* ListenerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0611E611C3D6F6200BBFD22 /* ListenerTableViewCell.swift */; };
 		B07AA65B1C28719F00695F96 /* CreateListenerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65A1C28719F00695F96 /* CreateListenerApi.swift */; };
 		B07AA65D1C29B58C00695F96 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65C1C29B58C00695F96 /* Thread.swift */; };
 		B07AA65F1C29B85B00695F96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65E1C29B85B00695F96 /* User.swift */; };
@@ -64,6 +65,7 @@
 		B0561F541C24839E00213F33 /* MemoriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0561F581C24839E00213F33 /* MemoriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesUITests.swift; sourceTree = "<group>"; };
 		B0561F5A1C24839E00213F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0611E611C3D6F6200BBFD22 /* ListenerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListenerTableViewCell.swift; sourceTree = "<group>"; };
 		B07AA65A1C28719F00695F96 /* CreateListenerApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateListenerApi.swift; sourceTree = "<group>"; };
 		B07AA65C1C29B58C00695F96 /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		B07AA65E1C29B85B00695F96 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -144,11 +146,12 @@
 				B07AA6681C29DB9E00695F96 /* SessionController.swift */,
 				B07AA66A1C2B21F300695F96 /* LoginController.swift */,
 				B07AA6791C35A99700695F96 /* LandingController.swift */,
-				B07AA6601C29CDC400695F96 /* OldClipsController.swift */,
 				B082172B1C24AF1B0011F0DB /* RecordController.swift */,
+				B07AA67F1C3D613C00695F96 /* SaveClipController.swift */,
+				B0611E611C3D6F6200BBFD22 /* ListenerTableViewCell.swift */,
+				B07AA6601C29CDC400695F96 /* OldClipsController.swift */,
 				B07AA67B1C3AC07100695F96 /* PlayClipController.swift */,
 				B07AA67D1C3AF6A900695F96 /* ListenersController.swift */,
-				B07AA67F1C3D613C00695F96 /* SaveClipController.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				B07AA65B1C28719F00695F96 /* CreateListenerApi.swift in Sources */,
 				B0FCCE171C28675E009FECB0 /* GetListenersApi.swift in Sources */,
 				B07AA66B1C2B21F300695F96 /* LoginController.swift in Sources */,
+				B0611E621C3D6F6200BBFD22 /* ListenerTableViewCell.swift in Sources */,
 				B082172C1C24AF1B0011F0DB /* RecordController.swift in Sources */,
 				B07AA6651C29D81200695F96 /* GetClipsApi.swift in Sources */,
 				B07AA6801C3D613C00695F96 /* SaveClipController.swift in Sources */,

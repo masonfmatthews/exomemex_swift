@@ -54,6 +54,14 @@ class RecordController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "doneRecording" {
+            let controller = segue.destinationViewController as! ChooseListenersController
+            controller.clipName = self.nameField.text!
+            controller.filePath = self.filePath!
+        }
+    }
+    
     func record() {
         //init
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()

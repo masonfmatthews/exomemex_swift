@@ -188,7 +188,7 @@
                                 </state>
                                 <connections>
                                     <action selector="saveRecording:" destination="Pzk-GN-SIr" eventType="touchUpInside" id="1mp-Xl-AT1"/>
-                                    <segue destination="WeJ-7q-Pmj" kind="show" id="wpa-P8-BYH"/>
+                                    <segue destination="WeJ-7q-Pmj" kind="show" identifier="doneRecording" id="wpa-P8-BYH"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azC-5y-gWM">

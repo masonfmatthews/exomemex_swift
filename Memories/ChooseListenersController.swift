@@ -10,6 +10,10 @@ class ChooseListenersController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationItem.leftBarButtonItem = self.editButtonItem() //Wipes out the back button.
+        
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.leftItemsSupplementBackButton = false
+        
         let sendButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "sendClip:")
         sendButton.title = "Send"
         self.navigationItem.rightBarButtonItem = sendButton
@@ -46,6 +50,7 @@ class ChooseListenersController: UITableViewController {
         
         let listener = listeners[indexPath.row]
         cell.listenerName.text = "\(listener.name)"
+        cell.listenerId.text = "\(listener.id)"
         return cell
     }
     

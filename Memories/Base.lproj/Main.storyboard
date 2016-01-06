@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--LandingController-->
@@ -215,22 +216,43 @@
             </objects>
             <point key="canvasLocation" x="1247.5" y="663.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Choose Listeners Controller-->
         <scene sceneID="Mmc-km-WwL">
             <objects>
-                <tableViewController id="WeJ-7q-Pmj" sceneMemberID="viewController">
+                <tableViewController id="WeJ-7q-Pmj" customClass="ChooseListenersController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Zo-sD-KWD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BXb-lM-k0f">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="BXb-lM-k0f" customClass="ChooseListenerCell" customModule="Memories" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BXb-lM-k0f" id="Hhm-0z-KTY">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ztn-dj-rYg">
+                                            <rect key="frame" x="8" y="6" width="51" height="31"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BL-aR-nvs">
+                                            <rect key="frame" x="65" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="leadingMargin" secondItem="ztn-dj-rYg" secondAttribute="leading" id="BGc-Jd-mDW"/>
+                                        <constraint firstItem="8BL-aR-nvs" firstAttribute="centerY" secondItem="Hhm-0z-KTY" secondAttribute="centerY" id="P3A-Z4-UUZ"/>
+                                        <constraint firstItem="8BL-aR-nvs" firstAttribute="leading" secondItem="ztn-dj-rYg" secondAttribute="trailing" constant="8" id="aXM-AN-dR4"/>
+                                        <constraint firstItem="ztn-dj-rYg" firstAttribute="centerY" secondItem="Hhm-0z-KTY" secondAttribute="centerY" id="xTk-p2-cyX"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="listenerName" destination="8BL-aR-nvs" id="T9I-za-GkY"/>
+                                    <outlet property="listenerSwitch" destination="Hhm-0z-KTY" id="yKA-xl-suj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

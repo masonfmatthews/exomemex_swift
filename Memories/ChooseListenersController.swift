@@ -2,8 +2,10 @@ import UIKit
 
 class ChooseListenersController: UITableViewController {
     
+    var clipName = String()
+    var filePath = String()
     var session = SessionController.sharedController.session
-    var listeners : [User] = []
+    var listeners = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,15 @@ class ChooseListenersController: UITableViewController {
     }
     
     func sendClip(sender: AnyObject) {
+        var listenerIds = [Int]()
+        for cell in self.tableView.visibleCells {
+            let listenerCell = cell as! ChooseListenerCell
+            if listenerCell.listenerSwitch.on {
+                listenerIds += [Int(listenerCell.listenerId.text!)!]
+            }
+        }
+        let _ = CreateClipApi(clipFields: ["name" : clipName], listenerIds: listenerIds, path: filePath)
+        //TODO: Later, display something different if the API returns an error.
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -31,7 +42,7 @@ class ChooseListenersController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)as! ChooseListenerCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ChooseListenerCell
         
         let listener = listeners[indexPath.row]
         cell.listenerName.text = "\(listener.name)"

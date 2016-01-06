@@ -15,8 +15,6 @@ class RecordController: UIViewController {
     }
     @IBAction func saveRecording(sender: AnyObject) {
         self.audioRecorder!.stop()
-        let _ = CreateClipApi(clipFields: ["name" : nameField.text!], listenerIds: [1], path: filePath!)
-        //TODO: Later, display something different if the API returns an error.
     }
     
     var filePath : String?

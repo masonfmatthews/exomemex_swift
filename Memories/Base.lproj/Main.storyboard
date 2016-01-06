@@ -267,6 +267,9 @@
                             <outlet property="delegate" destination="WeJ-7q-Pmj" id="pMp-Mn-gyQ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="Aum-lq-c3u" kind="show" identifier="finishedClip" id="k53-p3-7Vz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohc-AA-rwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -396,4 +399,7 @@
             <point key="canvasLocation" x="765.5" y="-115.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="k53-p3-7Vz"/>
+    </inferredMetricsTieBreakers>
 </document>

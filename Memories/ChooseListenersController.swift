@@ -9,10 +9,6 @@ class ChooseListenersController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationItem.leftBarButtonItem = self.editButtonItem() //Wipes out the back button.
-        
-        self.navigationItem.leftBarButtonItem = nil
-        self.navigationItem.leftItemsSupplementBackButton = false
         
         let sendButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "sendClip:")
         sendButton.title = "Send"
@@ -35,6 +31,8 @@ class ChooseListenersController: UITableViewController {
         }
         let _ = CreateClipApi(clipFields: ["name" : clipName], listenerIds: listenerIds, path: filePath)
         //TODO: Later, display something different if the API returns an error.
+        
+        performSegueWithIdentifier("finishedClip", sender: self)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

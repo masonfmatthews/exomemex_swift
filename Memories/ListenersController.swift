@@ -14,6 +14,7 @@ class ListenersController: UITableViewController {
         self.navigationItem.rightBarButtonItem = addButton
         Thread.runOnBackgroundThread {
             self.listeners = GetListenersApi().getAll()
+            self.listeners.sortInPlace({ p1, p2 in p1.name < p2.name })
             Thread.runOnUIThread(self.tableView.reloadData)
         }
     }

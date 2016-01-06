@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-class RecordViewController: UIViewController {
+class RecordController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var resetButton: UIButton!

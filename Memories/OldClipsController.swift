@@ -7,6 +7,9 @@ class OldClipsController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Your Recordings"
+        
         Thread.runOnBackgroundThread {
             self.clips = GetClipsApi().getAll()
             Thread.runOnUIThread(self.tableView.reloadData)
@@ -19,8 +22,10 @@ class OldClipsController: UITableViewController {
                 let clip = clips[indexPath.row]
                 let controller = segue.destinationViewController as! PlayClipController
                 controller.clip = clip
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "All"
+                navigationItem.backBarButtonItem = backItem
             }
         }
     }

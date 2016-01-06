@@ -22,6 +22,7 @@ class RecordController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "New Recording"
         
         self.resetButton.enabled = false
         self.saveButton.enabled = false

@@ -9,7 +9,8 @@ class ListenersController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationItem.leftBarButtonItem = self.editButtonItem() //Wipes out the back button.
+        self.title = "Friends and Family"
+        
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newListener:")
         self.navigationItem.rightBarButtonItem = addButton
         Thread.runOnBackgroundThread {

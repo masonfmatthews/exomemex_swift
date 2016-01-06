@@ -19,6 +19,7 @@ class PlayClipController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = clip!.name
         let url = NSURL(string: clip!.url)
         
         let playerItem = AVPlayerItem(URL: url!)

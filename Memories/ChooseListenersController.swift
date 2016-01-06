@@ -9,9 +9,11 @@ class ChooseListenersController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Send to..."
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
         
         let sendButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "sendClip:")
-        sendButton.title = "Send"
         self.navigationItem.rightBarButtonItem = sendButton
         
         Thread.runOnBackgroundThread {

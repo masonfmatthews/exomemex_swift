@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0561F341C24839E00213F33"
-               BuildableName = "Memories.app"
-               BlueprintName = "Memories"
-               ReferencedContainer = "container:Memories.xcodeproj">
+               BuildableName = "Journeology.app"
+               BlueprintName = "Journeology"
+               ReferencedContainer = "container:Journeology.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0561F481C24839E00213F33"
-               BuildableName = "MemoriesTests.xctest"
-               BlueprintName = "MemoriesTests"
-               ReferencedContainer = "container:Memories.xcodeproj">
+               BuildableName = "Journeology.xctest"
+               BlueprintName = "JourneologyTests"
+               ReferencedContainer = "container:Journeology.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0561F531C24839E00213F33"
-               BuildableName = "MemoriesUITests.xctest"
-               BlueprintName = "MemoriesUITests"
-               ReferencedContainer = "container:Memories.xcodeproj">
+               BuildableName = "Journeology.xctest"
+               BlueprintName = "JourneologyUITests"
+               ReferencedContainer = "container:Journeology.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0561F341C24839E00213F33"
-            BuildableName = "Memories.app"
-            BlueprintName = "Memories"
-            ReferencedContainer = "container:Memories.xcodeproj">
+            BuildableName = "Journeology.app"
+            BlueprintName = "Journeology"
+            ReferencedContainer = "container:Journeology.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0561F341C24839E00213F33"
-            BuildableName = "Memories.app"
-            BlueprintName = "Memories"
-            ReferencedContainer = "container:Memories.xcodeproj">
+            BuildableName = "Journeology.app"
+            BlueprintName = "Journeology"
+            ReferencedContainer = "container:Journeology.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0561F341C24839E00213F33"
-            BuildableName = "Memories.app"
-            BlueprintName = "Memories"
-            ReferencedContainer = "container:Memories.xcodeproj">
+            BuildableName = "Journeology.app"
+            BlueprintName = "Journeology"
+            ReferencedContainer = "container:Journeology.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

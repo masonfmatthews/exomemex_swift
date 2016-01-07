@@ -6,6 +6,8 @@ class PlayClipController: UIViewController {
     var clip : Clip?
     var player = AVPlayer()
     
+    @IBOutlet weak var transcriptLabel: UILabel!
+    
     @IBOutlet weak var playButton: UIButton!
     @IBAction func playClip(sender: AnyObject) {
         self.player.play()
@@ -20,8 +22,9 @@ class PlayClipController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = clip!.name
-        let url = NSURL(string: clip!.url)
+        self.transcriptLabel.text = clip!.transcript
         
+        let url = NSURL(string: clip!.url)
         let playerItem = AVPlayerItem(URL: url!)
         self.player = AVPlayer(playerItem: playerItem)
     }

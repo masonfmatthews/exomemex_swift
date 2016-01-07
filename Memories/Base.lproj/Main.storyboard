@@ -9,7 +9,7 @@
         <!--LandingController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LandingController" id="BYZ-38-t0r" customClass="LandingController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LandingController" id="BYZ-38-t0r" customClass="LandingController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,27 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8J-1N-Qgs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8J-1N-Qgs">
                                 <rect key="frame" x="115" y="189" width="144" height="30"/>
                                 <state key="normal" title="Make a Journal Entry"/>
                                 <connections>
                                     <segue destination="Pzk-GN-SIr" kind="show" id="K0d-6o-Raa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What would you like to do today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iF-IT-WSe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to do today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iF-IT-WSe">
                                 <rect key="frame" x="61" y="115" width="252" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-Df-xE1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-Df-xE1">
                                 <rect key="frame" x="92" y="270" width="190" height="30"/>
                                 <state key="normal" title="Listen to Your Existing Clips"/>
                                 <connections>
                                     <segue destination="ZH2-TG-oyS" kind="show" id="IOz-xE-duB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cQ-Qw-suo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cQ-Qw-suo">
                                 <rect key="frame" x="107" y="349" width="160" height="30"/>
                                 <state key="normal" title="Add Friends and Family"/>
                                 <connections>
@@ -79,7 +79,7 @@
         <!--Old Clips Controller-->
         <scene sceneID="12M-L6-C8A">
             <objects>
-                <tableViewController id="ZH2-TG-oyS" customClass="OldClipsController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZH2-TG-oyS" customClass="OldClipsController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2JG-He-Ifg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,7 +120,7 @@
         <!--Play Clip Controller-->
         <scene sceneID="ZqD-si-7TN">
             <objects>
-                <viewController id="TnH-If-P0H" customClass="PlayClipController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TnH-If-P0H" customClass="PlayClipController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ajv-oY-1BD"/>
                         <viewControllerLayoutGuide type="bottom" id="UId-df-q47"/>
@@ -130,19 +130,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ip-vD-JE5">
-                                <rect key="frame" x="171" y="399" width="32" height="30"/>
+                                <rect key="frame" x="173" y="151" width="32" height="30"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
                                     <action selector="stopClip:" destination="TnH-If-P0H" eventType="touchUpInside" id="Ch4-75-Tep"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idz-v6-i1Q">
-                                <rect key="frame" x="172" y="319" width="30" height="30"/>
+                                <rect key="frame" x="173" y="93" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playClip:" destination="TnH-If-P0H" eventType="touchUpInside" id="Qfh-Qg-Jg7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transcript:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH2-zo-1NT">
+                                <rect key="frame" x="20" y="200" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R29-aB-GW7">
+                                <rect key="frame" x="20" y="246" width="335" height="269"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -150,6 +162,7 @@
                     <connections>
                         <outlet property="playButton" destination="idz-v6-i1Q" id="qyA-8I-3jf"/>
                         <outlet property="stopButton" destination="7Ip-vD-JE5" id="omo-YI-Ac9"/>
+                        <outlet property="transcriptLabel" destination="R29-aB-GW7" id="9U9-EW-tj1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpu-eM-xQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,7 +172,7 @@
         <!--Record Controller-->
         <scene sceneID="llQ-zq-Xhf">
             <objects>
-                <viewController id="Pzk-GN-SIr" customClass="RecordController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pzk-GN-SIr" customClass="RecordController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7g9-I8-Q8g"/>
                         <viewControllerLayoutGuide type="bottom" id="9zT-Lm-WW3"/>
@@ -219,13 +232,13 @@
         <!--Choose Listeners Controller-->
         <scene sceneID="Mmc-km-WwL">
             <objects>
-                <tableViewController id="WeJ-7q-Pmj" customClass="ChooseListenersController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="WeJ-7q-Pmj" customClass="ChooseListenersController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Zo-sD-KWD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="BXb-lM-k0f" customClass="ChooseListenerCell" customModule="Memories" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="BXb-lM-k0f" customClass="ChooseListenerCell" customModule="Journeology" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BXb-lM-k0f" id="Hhm-0z-KTY">
@@ -238,13 +251,13 @@
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVR-W8-wDu">
                                             <rect key="frame" x="317" y="11" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BL-aR-nvs">
                                             <rect key="frame" x="65" y="11" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -278,7 +291,7 @@
         <!--LoginController-->
         <scene sceneID="nRS-ax-EZg">
             <objects>
-                <viewController storyboardIdentifier="LoginController" title="LoginController" id="5KW-Ap-eq4" customClass="LoginController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" title="LoginController" id="5KW-Ap-eq4" customClass="LoginController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dqe-6C-kZj"/>
                         <viewControllerLayoutGuide type="bottom" id="fxz-ry-0hz"/>
@@ -363,7 +376,7 @@
         <!--Listeners Controller-->
         <scene sceneID="DXX-Uk-hwv">
             <objects>
-                <tableViewController id="XxL-ve-uZR" customClass="ListenersController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XxL-ve-uZR" customClass="ListenersController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="edG-VZ-feW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -22,7 +22,10 @@ final class GetClipsApi : Api {
         if json != nil {
             var clips:[Clip] = []
             for result in json! {
-                clips.append(Clip(id: result["id"] as! Int, name: result["name"] as! String, url: result["url"] as! String))
+                clips.append(Clip(id: result["id"] as! Int,
+                    name: result["name"] as! String,
+                    url: result["url"] as! String,
+                    transcript: result["transcript"] as? String))
             }
             return clips
         } else {

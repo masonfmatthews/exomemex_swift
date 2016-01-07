@@ -22,6 +22,7 @@ class PlayClipController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = clip!.name
+        print(clip!.transcript)
         self.transcriptLabel.text = clip!.transcript
         
         let url = NSURL(string: clip!.url)

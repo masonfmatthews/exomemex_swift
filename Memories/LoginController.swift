@@ -2,9 +2,11 @@ import UIKit
 
 class LoginController: UIViewController {
     
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    
     @IBAction func authenticate(sender: AnyObject) {
         var _ = AuthenticateApi(email: self.emailField.text!,
                 password: self.passwordField.text!,
@@ -15,6 +17,8 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SessionController.sharedController.removeIdAndToken()
+        
+        Style.primaryButton(loginButton)
     }
     
     override func didReceiveMemoryWarning() {

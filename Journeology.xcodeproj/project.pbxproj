@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02DE8391C4033C300BC7A40 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DE8381C4033C300BC7A40 /* Style.swift */; };
 		B0561F391C24839E00213F33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F381C24839E00213F33 /* AppDelegate.swift */; };
 		B0561F3E1C24839E00213F33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0561F3C1C24839E00213F33 /* Main.storyboard */; };
 		B0561F401C24839E00213F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0561F3F1C24839E00213F33 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B02DE8381C4033C300BC7A40 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		B0561F351C24839E00213F33 /* Journeology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journeology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0561F381C24839E00213F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0561F3D1C24839E00213F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				B07AA65C1C29B58C00695F96 /* Thread.swift */,
 				B07AA6771C35986600695F96 /* Extensions.swift */,
+				B02DE8381C4033C300BC7A40 /* Style.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				B07AA67C1C3AC07100695F96 /* PlayClipController.swift in Sources */,
 				B07AA6741C2B4A1D00695F96 /* Api.swift in Sources */,
 				B07AA6631C29CE5F00695F96 /* Clip.swift in Sources */,
+				B02DE8391C4033C300BC7A40 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

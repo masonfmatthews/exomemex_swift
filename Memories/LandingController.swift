@@ -2,6 +2,9 @@ import UIKit
 
 class LandingController: UIViewController {
     
+    @IBOutlet weak var journalButton: UIButton!
+    @IBOutlet weak var interviewButton: UIButton!
+    
     @IBOutlet weak var listenButton: UIButton!
     @IBOutlet weak var familyButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
@@ -10,22 +13,15 @@ class LandingController: UIViewController {
         super.viewDidLoad()
         self.title = "Journeology"
         
-        makeSettingsButton(self.listenButton)
-        makeSettingsButton(self.familyButton)
-        makeSettingsButton(self.logoutButton)
+        Style.primaryButton(self.journalButton)
+        Style.primaryButton(self.interviewButton)
+        Style.secondaryButton(self.listenButton)
+        Style.secondaryButton(self.familyButton)
+        Style.secondaryButton(self.logoutButton)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    private func makeSettingsButton(button: UIButton!) {
-        let brown = UIColor(red: 134/255, green: 83/255, blue: 39/255, alpha: 1)
-        button.setTitleColor(brown, forState: .Normal)
-        button.backgroundColor = UIColor.clearColor()
-        button.layer.borderWidth = 1
-        button.layer.borderColor = brown.CGColor
-        button.layer.cornerRadius = 4
     }
     
 }

@@ -3,35 +3,37 @@ import AVFoundation
 
 class RecordController: UIViewController {
     
+    var filePath : String?
+    var audioRecorder : AVAudioRecorder?
+    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var innerRecordButton: UIButton!
     @IBOutlet weak var outerRecordButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    
     @IBAction func resetRecording(sender: AnyObject) {
-        print("Recording stopped and deleted!")
         self.audioRecorder!.deleteRecording()
         
-        self.resetButton.enabled = false
-        self.saveButton.enabled = false
+        self.innerRecordButton.backgroundColor = UIColor.redColor()
+        Style.disabledPrimaryButton(self.saveButton)
+        Style.disabledSecondaryButton(self.resetButton)
     }
+    
     @IBAction func saveRecording(sender: AnyObject) {
         self.audioRecorder!.stop()
     }
-    
-    var filePath : String?
-    var audioRecorder : AVAudioRecorder?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "New Recording"
         
-        self.resetButton.enabled = false
-        self.saveButton.enabled = false
+        Style.disabledPrimaryButton(self.saveButton)
+        Style.disabledSecondaryButton(self.resetButton)
         
         //TODO: Are buttons a really lame way to make this record button look nice?
         self.innerRecordButton.setTitle("", forState: .Normal)
-        self.innerRecordButton.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+        self.innerRecordButton.backgroundColor = UIColor.redColor()
         self.innerRecordButton.layer.cornerRadius = 0.5 * innerRecordButton.bounds.size.width
         self.innerRecordButton.addTarget(self, action: "record", forControlEvents: .TouchUpInside)
         
@@ -96,8 +98,10 @@ class RecordController: UIViewController {
                     try! self.audioRecorder = AVAudioRecorder(URL: url, settings: settings)
                     self.audioRecorder!.record()
                     
-                    self.resetButton.enabled = true
-                    self.saveButton.enabled = true
+                    self.innerRecordButton.backgroundColor = UIColor.lightGrayColor()
+                    
+                    Style.primaryButton(self.saveButton)
+                    Style.secondaryButton(self.resetButton)
                     
                 } else{
                     print("Permission not granted!")

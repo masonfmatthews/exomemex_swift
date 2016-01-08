@@ -69,7 +69,7 @@ class ListenersController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         let listener = listeners[indexPath.row]
-        cell.textLabel!.text = "\(listener.name) (\(listener.email))"
+        cell.textLabel!.text = "\(listener.name)"
         return cell
     }
     

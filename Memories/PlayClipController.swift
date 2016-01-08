@@ -22,6 +22,10 @@ class PlayClipController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = clip!.name
+        
+        Style.primaryButton(self.playButton)
+        Style.secondaryButton(self.stopButton)
+        
         print(clip!.transcript)
         self.transcriptLabel.text = clip!.transcript
         

@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journeology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFx-RZ-XpM">
-                                <rect key="frame" x="164" y="284" width="272" height="32.5"/>
+                                <rect key="frame" x="51" y="317" width="272" height="32.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="272" id="5mP-ky-jWl"/>
                                     <constraint firstAttribute="height" constant="32.5" id="koJ-3n-VDi" userLabel="height = 32"/>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="journal" translatesAutoresizingMaskIntoConstraints="NO" id="4vz-tP-NZA">
-                                <rect key="frame" x="233" y="150" width="134" height="126"/>
+                                <rect key="frame" x="120" y="183" width="134" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="7AP-fX-vUd"/>
                                     <constraint firstAttribute="height" constant="126" id="8z2-Kv-kUw"/>
@@ -43,6 +43,7 @@
                             <constraint firstItem="FFx-RZ-XpM" firstAttribute="top" secondItem="4vz-tP-NZA" secondAttribute="bottom" constant="8" id="eby-qs-bYH"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

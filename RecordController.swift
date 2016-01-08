@@ -4,6 +4,8 @@ import AVFoundation
 class RecordController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var innerRecordButton: UIButton!
+    @IBOutlet weak var outerRecordButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func resetRecording(sender: AnyObject) {
@@ -28,25 +30,21 @@ class RecordController: UIViewController {
         self.saveButton.enabled = false
         
         //TODO: Are buttons a really lame way to make this record button look nice?
-        let button = UIButton(type: .Custom) as UIButton
-        button.frame = CGRectMake(165, 205, 40, 40)
-        button.backgroundColor = UIColor(red: 200, green: 0, blue: 0, alpha: 1)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.addTarget(self, action: "record", forControlEvents: .TouchUpInside)
-        view.addSubview(button)
+        self.innerRecordButton.setTitle("", forState: .Normal)
+        self.innerRecordButton.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+        self.innerRecordButton.layer.cornerRadius = 0.5 * innerRecordButton.bounds.size.width
+        self.innerRecordButton.addTarget(self, action: "record", forControlEvents: .TouchUpInside)
         
-        let buttonBorder = UIButton(type: .Custom) as UIButton
-        buttonBorder.frame = CGRectMake(150, 190, 70, 70)
-        buttonBorder.backgroundColor = UIColor.clearColor()
-        buttonBorder.layer.borderColor = UIColor.blackColor().CGColor
-        buttonBorder.layer.borderWidth = 1
-        buttonBorder.layer.cornerRadius = 0.5 * buttonBorder.bounds.size.width
-        buttonBorder.addTarget(self, action: "record", forControlEvents: .TouchUpInside)
-        view.addSubview(buttonBorder)
+        self.outerRecordButton.setTitle("", forState: .Normal)
+        self.outerRecordButton.backgroundColor = UIColor.clearColor()
+        self.outerRecordButton.layer.borderColor = UIColor.blackColor().CGColor
+        self.outerRecordButton.layer.borderWidth = 1
+        self.outerRecordButton.layer.cornerRadius = 0.5 * outerRecordButton.bounds.size.width
+        self.outerRecordButton.addTarget(self, action: "record", forControlEvents: .TouchUpInside)
         
         let formatter = NSDateFormatter()
-        formatter.dateStyle = .MediumStyle
-        formatter.timeStyle = .ShortStyle
+        formatter.dateStyle = .LongStyle
+        formatter.timeStyle = .NoStyle
         self.nameField.text = formatter.stringFromDate(NSDate())
         
     }

@@ -239,7 +239,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9De-HB-Xkz">
-                                <rect key="frame" x="113" y="281" width="149" height="30"/>
+                                <rect key="frame" x="61" y="398" width="252" height="45"/>
                                 <state key="normal" title="Delete and Start Over">
                                     <color key="titleColor" red="1" green="0.014148592377726477" blue="0.017517807034689969" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -251,7 +251,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCM-c8-zw5">
-                                <rect key="frame" x="101" y="337" width="173" height="30"/>
+                                <rect key="frame" x="61" y="469" width="252" height="45"/>
                                 <state key="normal" title="Stop and Save Recording"/>
                                 <state key="disabled">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -266,18 +266,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recording Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re8-sM-WeR">
-                                <rect key="frame" x="90" y="111" width="195" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First, name your recording:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re8-sM-WeR">
+                                <rect key="frame" x="85" y="111" width="205" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgZ-tB-E2m">
+                                <rect key="frame" x="165" y="311" width="45" height="45"/>
+                                <state key="normal" title="Inner"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Then, hit the record button and speak:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GN-oY-TVi">
+                                <rect key="frame" x="41" y="251" width="294" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOv-5h-312">
+                                <rect key="frame" x="142" y="289" width="90" height="90"/>
+                                <state key="normal" title="Outer"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="innerRecordButton" destination="bgZ-tB-E2m" id="jFl-J8-O9A"/>
                         <outlet property="nameField" destination="azC-5y-gWM" id="SvS-0p-v0B"/>
+                        <outlet property="outerRecordButton" destination="bOv-5h-312" id="vzL-P8-znS"/>
                         <outlet property="resetButton" destination="9De-HB-Xkz" id="FJN-a2-Skj"/>
                         <outlet property="saveButton" destination="iCM-c8-zw5" id="n1f-qx-VYG"/>
                     </connections>

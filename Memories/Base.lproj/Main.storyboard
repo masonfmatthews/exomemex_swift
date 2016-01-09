@@ -219,16 +219,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R29-aB-GW7">
-                                <rect key="frame" x="20" y="352" width="335" height="269"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="269" id="2HF-wX-Ulu"/>
-                                    <constraint firstAttribute="width" constant="335" id="iBW-BG-ebo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -236,8 +226,6 @@
                             <constraint firstItem="idz-v6-i1Q" firstAttribute="top" secondItem="Ajv-oY-1BD" secondAttribute="bottom" constant="60" id="HxS-MA-1dv"/>
                             <constraint firstItem="vH2-zo-1NT" firstAttribute="top" secondItem="7Ip-vD-JE5" secondAttribute="bottom" constant="78" id="O86-Rx-DS2"/>
                             <constraint firstItem="vH2-zo-1NT" firstAttribute="centerX" secondItem="dsW-qE-hAH" secondAttribute="centerX" id="RW8-NM-ez2"/>
-                            <constraint firstItem="R29-aB-GW7" firstAttribute="centerX" secondItem="dsW-qE-hAH" secondAttribute="centerX" id="Ua3-xZ-dxV"/>
-                            <constraint firstItem="R29-aB-GW7" firstAttribute="top" secondItem="vH2-zo-1NT" secondAttribute="bottom" constant="19" id="aIw-R8-Es0"/>
                             <constraint firstItem="7Ip-vD-JE5" firstAttribute="centerX" secondItem="dsW-qE-hAH" secondAttribute="centerX" id="bQV-xV-47c"/>
                             <constraint firstItem="idz-v6-i1Q" firstAttribute="centerX" secondItem="dsW-qE-hAH" secondAttribute="centerX" id="eIc-1v-VMG"/>
                         </constraints>
@@ -246,7 +234,6 @@
                     <connections>
                         <outlet property="playButton" destination="idz-v6-i1Q" id="qyA-8I-3jf"/>
                         <outlet property="stopButton" destination="7Ip-vD-JE5" id="omo-YI-Ac9"/>
-                        <outlet property="transcriptLabel" destination="R29-aB-GW7" id="9U9-EW-tj1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpu-eM-xQK" userLabel="First Responder" sceneMemberID="firstResponder"/>

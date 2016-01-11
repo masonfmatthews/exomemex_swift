@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B02DE8391C4033C300BC7A40 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DE8381C4033C300BC7A40 /* Style.swift */; };
+		B02DE83B1C44164600BC7A40 /* QuestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DE83A1C44164600BC7A40 /* QuestionsController.swift */; };
+		B02DE83D1C44169F00BC7A40 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DE83C1C44169F00BC7A40 /* Question.swift */; };
+		B02DE83F1C44183500BC7A40 /* GetUserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DE83E1C44183500BC7A40 /* GetUserApi.swift */; };
 		B0561F391C24839E00213F33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F381C24839E00213F33 /* AppDelegate.swift */; };
 		B0561F3E1C24839E00213F33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0561F3C1C24839E00213F33 /* Main.storyboard */; };
 		B0561F401C24839E00213F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0561F3F1C24839E00213F33 /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 
 /* Begin PBXFileReference section */
 		B02DE8381C4033C300BC7A40 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		B02DE83A1C44164600BC7A40 /* QuestionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsController.swift; sourceTree = "<group>"; };
+		B02DE83C1C44169F00BC7A40 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		B02DE83E1C44183500BC7A40 /* GetUserApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserApi.swift; sourceTree = "<group>"; };
 		B0561F351C24839E00213F33 /* Journeology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journeology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0561F381C24839E00213F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0561F3D1C24839E00213F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 				B07AA6601C29CDC400695F96 /* OldClipsController.swift */,
 				B07AA67B1C3AC07100695F96 /* PlayClipController.swift */,
 				B07AA67D1C3AF6A900695F96 /* ListenersController.swift */,
+				B02DE83A1C44164600BC7A40 /* QuestionsController.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 				B07AA6751C2B511200695F96 /* CreateClipApi.swift */,
 				B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */,
 				B07AA65A1C28719F00695F96 /* CreateListenerApi.swift */,
+				B02DE83E1C44183500BC7A40 /* GetUserApi.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 				B07AA65E1C29B85B00695F96 /* User.swift */,
 				B07AA6621C29CE5F00695F96 /* Clip.swift */,
 				B07AA6661C29DB5F00695F96 /* Session.swift */,
+				B02DE83C1C44169F00BC7A40 /* Question.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -350,14 +359,17 @@
 				B07AA6651C29D81200695F96 /* GetClipsApi.swift in Sources */,
 				B07AA6781C35986600695F96 /* Extensions.swift in Sources */,
 				B07AA66D1C2B235C00695F96 /* AuthenticateApi.swift in Sources */,
+				B02DE83D1C44169F00BC7A40 /* Question.swift in Sources */,
 				B07AA6761C2B511200695F96 /* CreateClipApi.swift in Sources */,
 				B07AA6671C29DB5F00695F96 /* Session.swift in Sources */,
+				B02DE83F1C44183500BC7A40 /* GetUserApi.swift in Sources */,
 				B07AA65F1C29B85B00695F96 /* User.swift in Sources */,
 				B0561F391C24839E00213F33 /* AppDelegate.swift in Sources */,
 				B07AA67E1C3AF6A900695F96 /* ListenersController.swift in Sources */,
 				B07AA67A1C35A99700695F96 /* LandingController.swift in Sources */,
 				B07AA65D1C29B58C00695F96 /* Thread.swift in Sources */,
 				B07AA6611C29CDC400695F96 /* OldClipsController.swift in Sources */,
+				B02DE83B1C44164600BC7A40 /* QuestionsController.swift in Sources */,
 				B0611E641C3D75DD00BBFD22 /* ChooseListenersController.swift in Sources */,
 				B07AA67C1C3AC07100695F96 /* PlayClipController.swift in Sources */,
 				B07AA6741C2B4A1D00695F96 /* Api.swift in Sources */,

@@ -42,6 +42,9 @@
                                 <state key="normal" title="Be Interviewed">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gpX-eY-hB4" kind="show" id="4sq-PH-SfX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to do today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iF-IT-WSe">
                                 <rect key="frame" x="61" y="124" width="252" height="21"/>
@@ -99,8 +102,8 @@
                                     <segue destination="5KW-Ap-eq4" kind="show" identifier="logoutSegue" animates="NO" action="showDetailViewController:sender:" id="PAF-PE-Fzk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(2 Questions to be Answered)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43o-FN-F1k">
-                                <rect key="frame" x="79" y="295" width="216" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(5 Questions to be Answered)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43o-FN-F1k">
+                                <rect key="frame" x="69" y="295" width="236" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.52549019610000003" green="0.32549019610000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -132,6 +135,7 @@
                     <connections>
                         <outlet property="familyButton" destination="4cQ-Qw-suo" id="DVK-Nk-FYX"/>
                         <outlet property="interviewButton" destination="eYn-te-cbE" id="Jlg-JV-ax7"/>
+                        <outlet property="interviewLabel" destination="43o-FN-F1k" id="dpn-HU-GpX"/>
                         <outlet property="journalButton" destination="U8J-1N-Qgs" id="Aib-54-phu"/>
                         <outlet property="listenButton" destination="pcb-Df-xE1" id="Tg1-RM-dgG"/>
                         <outlet property="logoutButton" destination="Ivm-Mh-git" id="bit-7c-u3q"/>
@@ -582,6 +586,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xnu-fJ-m3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="765.5" y="-115.5"/>
+        </scene>
+        <!--Questions Controller-->
+        <scene sceneID="zrZ-mT-LcT">
+            <objects>
+                <tableViewController id="gpX-eY-hB4" customClass="QuestionsController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fSL-QI-NeW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Ju9-PZ-rTO">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ju9-PZ-rTO" id="WpW-Qb-tfc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fon-xD-glk">
+                                            <rect key="frame" x="15" y="-1" width="345" height="43.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gpX-eY-hB4" id="f7m-Zs-vd7"/>
+                            <outlet property="delegate" destination="gpX-eY-hB4" id="DV3-ta-ZQU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5A-t5-Pg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247.5" y="-115.5"/>
         </scene>
     </scenes>
     <resources>

@@ -4,6 +4,7 @@ class LandingController: UIViewController {
     
     @IBOutlet weak var journalButton: UIButton!
     @IBOutlet weak var interviewButton: UIButton!
+    @IBOutlet weak var interviewLabel: UILabel!
     
     @IBOutlet weak var listenButton: UIButton!
     @IBOutlet weak var familyButton: UIButton!

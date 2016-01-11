@@ -8,7 +8,6 @@ final class GetUserApi : Api {
         super.init()
         
         let urlString = self.domain + self.path + "users/\(user_id)?token=\(self.session.token!)"
-        print(urlString)
         if let url = NSURL(string: urlString),
             data = NSData(contentsOfURL: url) {
                 self.json = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) as? [String: AnyObject]
@@ -26,19 +25,15 @@ final class GetUserApi : Api {
     }
     
     func getNextQuestions() -> [Question] {
-        print("In method")
         if json != nil {
-            print("JSON not nil")
             var questions:[Question] = []
             let array = json!["next_questions"] as! [[String: AnyObject]]
             for result in array {
-                print(result["question"] as! String)
                 questions.append(Question(id: result["id"] as! Int,
                     question: result["question"] as! String))
             }
             return questions
         } else {
-            print("JSON is nil")
             return []
         }
     }

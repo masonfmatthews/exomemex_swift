@@ -18,6 +18,20 @@ class QuestionsController: UITableViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "answerQuestion" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let question = questions[indexPath.row]
+                let controller = segue.destinationViewController as! RecordController
+                controller.question = question
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "Questions"
+                navigationItem.backBarButtonItem = backItem
+            }
+        }
+    }
+    
 //    func newListener(sender: AnyObject) {
 //        let alert = UIAlertController(title: "Add Friend/Family", message: "Please enter name and e-mail address.", preferredStyle: .Alert)
 //        

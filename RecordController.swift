@@ -5,6 +5,7 @@ class RecordController: UIViewController {
     
     var filePath : String?
     var audioRecorder : AVAudioRecorder?
+    var question : Question?
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var innerRecordButton: UIButton!
@@ -44,10 +45,14 @@ class RecordController: UIViewController {
         self.outerRecordButton.layer.cornerRadius = 0.5 * outerRecordButton.bounds.size.width
         self.outerRecordButton.addTarget(self, action: "record", forControlEvents: .TouchUpInside)
         
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = .LongStyle
-        formatter.timeStyle = .NoStyle
-        self.nameField.text = formatter.stringFromDate(NSDate())
+        if self.question == nil {
+            let formatter = NSDateFormatter()
+            formatter.dateStyle = .LongStyle
+            formatter.timeStyle = .NoStyle
+            self.nameField.text = formatter.stringFromDate(NSDate())
+        } else {
+            self.nameField.text = self.question!.question
+        }
         
     }
     
@@ -60,6 +65,7 @@ class RecordController: UIViewController {
             let controller = segue.destinationViewController as! ChooseListenersController
             controller.clipName = self.nameField.text!
             controller.filePath = self.filePath!
+            controller.question = self.question
         }
     }
     

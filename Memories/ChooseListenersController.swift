@@ -4,6 +4,7 @@ class ChooseListenersController: UITableViewController {
     
     var clipName = String()
     var filePath = String()
+    var question : Question?
     var session = SessionController.sharedController.session
     var listeners = [User]()
     
@@ -24,6 +25,11 @@ class ChooseListenersController: UITableViewController {
     }
     
     func sendClip(sender: AnyObject) {
+        var clipFields = ["name" : self.clipName]
+        if question != nil {
+            clipFields["question_id"] = "\(question!.id)"
+        }
+        
         var listenerIds = [Int]()
         for cell in self.tableView.visibleCells {
             let listenerCell = cell as! ChooseListenerCell
@@ -31,7 +37,8 @@ class ChooseListenersController: UITableViewController {
                 listenerIds += [Int(listenerCell.listenerId.text!)!]
             }
         }
-        let _ = CreateClipApi(clipFields: ["name" : clipName], listenerIds: listenerIds, path: filePath)
+        
+        let _ = CreateClipApi(clipFields: clipFields, listenerIds: listenerIds, path: filePath)
         //TODO: Later, display something different if the API returns an error.
         
         performSegueWithIdentifier("finishedClip", sender: self)

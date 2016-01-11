@@ -68,6 +68,8 @@ class QuestionsController: UITableViewController {
         
         let question = questions[indexPath.row]
         cell.textLabel!.text = "\(question.question)"
+        cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        cell.textLabel!.numberOfLines = 3
         return cell
     }
     

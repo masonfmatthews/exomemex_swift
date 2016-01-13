@@ -2,6 +2,7 @@ import UIKit
 
 class LoginController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -19,27 +20,26 @@ class LoginController: UIViewController {
         SessionController.sharedController.removeIdAndToken()
         
         Style.primaryButton(loginButton)
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: "adjustForKeyboard:", name: UIKeyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: "adjustForKeyboard:", name: UIKeyboardWillChangeFrameNotification, object: nil)
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        animateViewMoving(true, moveValue: 100)
-    }
-    func textFieldDidEndEditing(textField: UITextField) {
-        animateViewMoving(false, moveValue: 100)
-    }
-    
-    func animateViewMoving (up:Bool, moveValue :CGFloat){
-        let movementDuration:NSTimeInterval = 0.3
-        let movement:CGFloat = ( up ? -moveValue : moveValue)
-        UIView.beginAnimations( "animateView", context: nil)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        UIView.setAnimationDuration(movementDuration )
-        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
-        UIView.commitAnimations()
+    func adjustForKeyboard(notification: NSNotification) {
+        
+        if notification.name == UIKeyboardWillHideNotification {
+            scrollView.contentInset = UIEdgeInsetsZero
+        } else {
+            scrollView.contentInset = UIEdgeInsets(top: -150, left: 0, bottom: 0, right: 0)
+        }
+        
+        scrollView.scrollIndicatorInsets = scrollView.contentInset
     }
     
     private func loginCallback(response: Bool?) {

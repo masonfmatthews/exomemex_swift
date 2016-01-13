@@ -102,8 +102,12 @@
                                     <segue destination="5KW-Ap-eq4" kind="show" identifier="logoutSegue" animates="NO" action="showDetailViewController:sender:" id="PAF-PE-Fzk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(5 Questions to be Answered)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43o-FN-F1k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(5 Questions to be Answered)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43o-FN-F1k">
                                 <rect key="frame" x="69" y="295" width="236" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="3Ih-cm-nMm"/>
+                                    <constraint firstAttribute="height" constant="21" id="iel-Sr-tfT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.52549019610000003" green="0.32549019610000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -113,9 +117,11 @@
                         <constraints>
                             <constraint firstItem="4cQ-Qw-suo" firstAttribute="top" secondItem="pcb-Df-xE1" secondAttribute="bottom" constant="20" id="2if-Mq-YNQ"/>
                             <constraint firstItem="Ivm-Mh-git" firstAttribute="top" secondItem="4cQ-Qw-suo" secondAttribute="bottom" constant="20" id="5kJ-tE-zD3"/>
+                            <constraint firstItem="43o-FN-F1k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="99r-km-dEI"/>
                             <constraint firstItem="6eh-P9-FmN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AuI-Pb-q1d"/>
                             <constraint firstItem="pcb-Df-xE1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E4m-K1-TMG"/>
                             <constraint firstItem="pcb-Df-xE1" firstAttribute="top" secondItem="6eh-P9-FmN" secondAttribute="bottom" constant="16" id="Hw1-o4-qeS"/>
+                            <constraint firstItem="43o-FN-F1k" firstAttribute="top" secondItem="eYn-te-cbE" secondAttribute="bottom" constant="8" id="MrQ-m6-iWb"/>
                             <constraint firstItem="4cQ-Qw-suo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NqH-dM-NfU"/>
                             <constraint firstItem="2iF-IT-WSe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="QOE-wU-i0y"/>
                             <constraint firstItem="U8J-1N-Qgs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RPs-G6-ssC"/>
@@ -479,6 +485,13 @@
                                             <action selector="authenticate:" destination="5KW-Ap-eq4" eventType="touchUpInside" id="zJ4-l4-aO6"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="journal" translatesAutoresizingMaskIntoConstraints="NO" id="8Y8-3p-qRz">
+                                        <rect key="frame" x="120" y="183" width="134" height="126"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="134" id="CZm-gb-0Z6"/>
+                                            <constraint firstAttribute="height" constant="126" id="uM8-po-iu4"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Journeology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bH-3e-jgK">
                                         <rect key="frame" x="51" y="317" width="272" height="32"/>
                                         <constraints>
@@ -489,8 +502,8 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2L-w5-aMX">
-                                        <rect key="frame" x="20" y="307" width="335" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2L-w5-aMX">
+                                        <rect key="frame" x="20" y="356" width="335" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="335" id="3gY-Fl-KPj"/>
                                             <constraint firstAttribute="height" constant="21" id="Z61-aY-FOm"/>
@@ -499,13 +512,6 @@
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="journal" translatesAutoresizingMaskIntoConstraints="NO" id="8Y8-3p-qRz">
-                                        <rect key="frame" x="120" y="183" width="134" height="126"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="134" id="CZm-gb-0Z6"/>
-                                            <constraint firstAttribute="height" constant="126" id="uM8-po-iu4"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="zOL-u4-8Mx" firstAttribute="top" secondItem="Uos-r2-OFz" secondAttribute="bottom" constant="35" id="4aY-in-3vG"/>
@@ -516,9 +522,11 @@
                                     <constraint firstItem="Uos-r2-OFz" firstAttribute="centerX" secondItem="0p2-99-2U0" secondAttribute="centerX" id="GrJ-Gj-OXE"/>
                                     <constraint firstAttribute="height" constant="667" id="Icc-eV-F37"/>
                                     <constraint firstItem="Uos-r2-OFz" firstAttribute="top" secondItem="2bH-3e-jgK" secondAttribute="bottom" constant="36" id="MGj-ku-qQi"/>
+                                    <constraint firstItem="l2L-w5-aMX" firstAttribute="centerX" secondItem="0p2-99-2U0" secondAttribute="centerX" id="QCX-6N-vrv"/>
                                     <constraint firstItem="2bH-3e-jgK" firstAttribute="top" secondItem="8Y8-3p-qRz" secondAttribute="bottom" constant="8" id="QxS-Ab-P2v"/>
                                     <constraint firstItem="2bH-3e-jgK" firstAttribute="centerY" secondItem="0p2-99-2U0" secondAttribute="centerY" id="pWe-Cu-GCF"/>
                                     <constraint firstItem="UTk-Qs-778" firstAttribute="top" secondItem="zOL-u4-8Mx" secondAttribute="bottom" constant="46" id="ppH-HY-0yp"/>
+                                    <constraint firstItem="Uos-r2-OFz" firstAttribute="top" secondItem="l2L-w5-aMX" secondAttribute="bottom" constant="8" id="sUG-50-cm9"/>
                                     <constraint firstItem="8Y8-3p-qRz" firstAttribute="centerX" secondItem="0p2-99-2U0" secondAttribute="centerX" id="uZE-Cq-MPf"/>
                                 </constraints>
                             </scrollView>
@@ -634,8 +642,8 @@
         <image name="journal" width="250" height="231"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="K0d-6o-Raa"/>
         <segue reference="U9Y-S1-8Pa"/>
-        <segue reference="jrJ-tk-vBe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.52549019610000003" green="0.32549019610000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
 </document>

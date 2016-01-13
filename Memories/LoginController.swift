@@ -19,6 +19,7 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         SessionController.sharedController.removeIdAndToken()
         
+        self.errorLabel.text = ""
         Style.primaryButton(loginButton)
         
         let notificationCenter = NSNotificationCenter.defaultCenter()

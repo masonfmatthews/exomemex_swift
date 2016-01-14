@@ -9,6 +9,8 @@ class TopicsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Choose a Topic"
+        self.tableView.estimatedRowHeight = 100.0;
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
         
         Thread.runOnBackgroundThread {
             self.topics = GetTopicsApi().getAll()

@@ -10,6 +10,8 @@ class QuestionsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Interview Questions"
+        self.tableView.estimatedRowHeight = 100.0;
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
         
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newQuestion:")
 //        self.navigationItem.rightBarButtonItem = addButton

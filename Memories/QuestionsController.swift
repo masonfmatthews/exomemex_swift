@@ -3,6 +3,7 @@ import UIKit
 class QuestionsController: UITableViewController {
     
     var session = SessionController.sharedController.session
+    var topic : Topic?
     var questions : [Question] = []
     var newQuestionField = UITextField()
     

@@ -39,6 +39,7 @@
 		B0AA2D421C47F26B00ECD98A /* GetTopicsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D411C47F26B00ECD98A /* GetTopicsApi.swift */; };
 		B0AA2D441C47F29600ECD98A /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D431C47F29600ECD98A /* Topic.swift */; };
 		B0AA2D461C47F48600ECD98A /* TopicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D451C47F48600ECD98A /* TopicsController.swift */; };
+		B0AA2D481C47F9C200ECD98A /* GetTopicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D471C47F9C200ECD98A /* GetTopicApi.swift */; };
 		B0FCCE171C28675E009FECB0 /* GetListenersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		B0AA2D411C47F26B00ECD98A /* GetTopicsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopicsApi.swift; sourceTree = "<group>"; };
 		B0AA2D431C47F29600ECD98A /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		B0AA2D451C47F48600ECD98A /* TopicsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsController.swift; sourceTree = "<group>"; };
+		B0AA2D471C47F9C200ECD98A /* GetTopicApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopicApi.swift; sourceTree = "<group>"; };
 		B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListenersApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +203,7 @@
 				B07AA65A1C28719F00695F96 /* CreateListenerApi.swift */,
 				B02DE83E1C44183500BC7A40 /* GetUserApi.swift */,
 				B0AA2D411C47F26B00ECD98A /* GetTopicsApi.swift */,
+				B0AA2D471C47F9C200ECD98A /* GetTopicApi.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				B07AA6611C29CDC400695F96 /* OldClipsController.swift in Sources */,
 				B02DE83B1C44164600BC7A40 /* QuestionsController.swift in Sources */,
 				B0611E641C3D75DD00BBFD22 /* ChooseListenersController.swift in Sources */,
+				B0AA2D481C47F9C200ECD98A /* GetTopicApi.swift in Sources */,
 				B07AA67C1C3AC07100695F96 /* PlayClipController.swift in Sources */,
 				B07AA6741C2B4A1D00695F96 /* Api.swift in Sources */,
 				B07AA6631C29CE5F00695F96 /* Clip.swift in Sources */,

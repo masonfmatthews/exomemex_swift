@@ -14,7 +14,7 @@ class QuestionsController: UITableViewController {
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "newQuestion:")
 //        self.navigationItem.rightBarButtonItem = addButton
         Thread.runOnBackgroundThread {
-            self.questions = GetUserApi(user_id: self.session.id!).getNextQuestions()
+            self.questions = GetTopicApi(topic_id: self.topic!.id).getQuestions()
             Thread.runOnUIThread(self.tableView.reloadData)
         }
     }

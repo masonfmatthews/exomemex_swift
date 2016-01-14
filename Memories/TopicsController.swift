@@ -4,6 +4,7 @@ class TopicsController: UITableViewController {
     
     var session = SessionController.sharedController.session
     var topics : [Topic] = []
+    var openQuestions : [Question] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,19 +30,44 @@ class TopicsController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if openQuestions.count > 0 {
+            if section == 0 {
+                return "Questions from Friends and Family"
+            } else {
+                return "Interview Topics"
+            }
+        } else {
+            return nil
+        }
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        if openQuestions.count > 0 {
+            return 2
+        } else {
+            return 1
+        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topics.count
+        if openQuestions.count > 0 && section == 0 {
+            return openQuestions.count
+        } else {
+            return topics.count
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        
-        let topic = topics[indexPath.row]
-        cell.textLabel!.text = "\(topic.name)"
+        if openQuestions.count > 0 && indexPath.section == 0 {
+            let question = openQuestions[indexPath.row]
+            cell.textLabel!.text = "\(question.question)"
+        } else {
+            let topic = topics[indexPath.row]
+            cell.textLabel!.text = "\(topic.name)"
+        }
         return cell
     }
     

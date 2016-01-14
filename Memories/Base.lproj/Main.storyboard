@@ -107,14 +107,14 @@
                                     <segue destination="5KW-Ap-eq4" kind="show" identifier="logoutSegue" animates="NO" action="showDetailViewController:sender:" id="PAF-PE-Fzk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(5 Questions to be Answered)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43o-FN-F1k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Question Count Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43o-FN-F1k">
                                 <rect key="frame" x="69" y="295" width="236" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="236" id="3Ih-cm-nMm"/>
                                     <constraint firstAttribute="height" constant="21" id="iel-Sr-tfT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.52549019610000003" green="0.32549019610000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.09475204954827593" green="0.54100743747931046" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -682,7 +682,7 @@
         <image name="journal" width="250" height="231"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jrJ-tk-vBe"/>
+        <segue reference="K0d-6o-Raa"/>
         <segue reference="U9Y-S1-8Pa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.52549019610000003" green="0.32549019610000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>

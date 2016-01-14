@@ -24,10 +24,19 @@ final class GetUserApi : Api {
         }
     }
     
-    func getNextQuestions() -> [Question] {
+    func getOpenQuestionCount() -> Int {
+        if json != nil {
+            let array = json!["open_questions"] as! [[String: AnyObject]]
+            return array.count
+        } else {
+            return 0
+        }
+    }
+    
+    func getOpenQuestions() -> [Question] {
         if json != nil {
             var questions:[Question] = []
-            let array = json!["next_questions"] as! [[String: AnyObject]]
+            let array = json!["open_questions"] as! [[String: AnyObject]]
             for result in array {
                 questions.append(Question(id: result["id"] as! Int,
                     question: result["question"] as! String))

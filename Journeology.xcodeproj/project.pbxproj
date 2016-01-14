@@ -36,6 +36,8 @@
 		B07AA67C1C3AC07100695F96 /* PlayClipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA67B1C3AC07100695F96 /* PlayClipController.swift */; };
 		B07AA67E1C3AF6A900695F96 /* ListenersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA67D1C3AF6A900695F96 /* ListenersController.swift */; };
 		B082172C1C24AF1B0011F0DB /* RecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082172B1C24AF1B0011F0DB /* RecordController.swift */; };
+		B0AA2D421C47F26B00ECD98A /* GetTopicsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D411C47F26B00ECD98A /* GetTopicsApi.swift */; };
+		B0AA2D441C47F29600ECD98A /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D431C47F29600ECD98A /* Topic.swift */; };
 		B0FCCE171C28675E009FECB0 /* GetListenersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		B07AA67B1C3AC07100695F96 /* PlayClipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayClipController.swift; sourceTree = "<group>"; };
 		B07AA67D1C3AF6A900695F96 /* ListenersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListenersController.swift; sourceTree = "<group>"; };
 		B082172B1C24AF1B0011F0DB /* RecordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordController.swift; path = ../RecordController.swift; sourceTree = "<group>"; };
+		B0AA2D411C47F26B00ECD98A /* GetTopicsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopicsApi.swift; sourceTree = "<group>"; };
+		B0AA2D431C47F29600ECD98A /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListenersApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +197,7 @@
 				B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */,
 				B07AA65A1C28719F00695F96 /* CreateListenerApi.swift */,
 				B02DE83E1C44183500BC7A40 /* GetUserApi.swift */,
+				B0AA2D411C47F26B00ECD98A /* GetTopicsApi.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				B07AA6621C29CE5F00695F96 /* Clip.swift */,
 				B07AA6661C29DB5F00695F96 /* Session.swift */,
 				B02DE83C1C44169F00BC7A40 /* Question.swift */,
+				B0AA2D431C47F29600ECD98A /* Topic.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -359,10 +365,12 @@
 				B07AA6651C29D81200695F96 /* GetClipsApi.swift in Sources */,
 				B07AA6781C35986600695F96 /* Extensions.swift in Sources */,
 				B07AA66D1C2B235C00695F96 /* AuthenticateApi.swift in Sources */,
+				B0AA2D441C47F29600ECD98A /* Topic.swift in Sources */,
 				B02DE83D1C44169F00BC7A40 /* Question.swift in Sources */,
 				B07AA6761C2B511200695F96 /* CreateClipApi.swift in Sources */,
 				B07AA6671C29DB5F00695F96 /* Session.swift in Sources */,
 				B02DE83F1C44183500BC7A40 /* GetUserApi.swift in Sources */,
+				B0AA2D421C47F26B00ECD98A /* GetTopicsApi.swift in Sources */,
 				B07AA65F1C29B85B00695F96 /* User.swift in Sources */,
 				B0561F391C24839E00213F33 /* AppDelegate.swift in Sources */,
 				B07AA67E1C3AF6A900695F96 /* ListenersController.swift in Sources */,

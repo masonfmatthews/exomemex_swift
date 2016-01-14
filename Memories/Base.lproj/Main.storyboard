@@ -45,7 +45,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jCy-Me-53F" kind="show" id="bmc-RD-rxb"/>
+                                    <segue destination="jCy-Me-53F" kind="show" identifier="beInterviewed" id="bmc-RD-rxb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to do today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iF-IT-WSe">
@@ -108,10 +108,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Question Count Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43o-FN-F1k">
-                                <rect key="frame" x="69" y="295" width="236" height="21"/>
+                                <rect key="frame" x="42" y="295" width="291" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="3Ih-cm-nMm"/>
                                     <constraint firstAttribute="height" constant="21" id="iel-Sr-tfT"/>
+                                    <constraint firstAttribute="width" constant="291" id="kPh-wf-6QE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.09475204954827593" green="0.54100743747931046" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
@@ -635,6 +635,17 @@
                                     <segue destination="gpX-eY-hB4" kind="show" identifier="selectTopic" id="hwf-fS-MAS"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="90" id="g1z-0x-Bek">
+                                <rect key="frame" x="0.0" y="136" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g1z-0x-Bek" id="IsO-2I-xFN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Pzk-GN-SIr" kind="show" identifier="answerOpenQuestion" id="Z5D-IW-c4v"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="jCy-Me-53F" id="Ai6-VY-Tkd"/>
@@ -682,7 +693,7 @@
         <image name="journal" width="250" height="231"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="K0d-6o-Raa"/>
+        <segue reference="Z5D-IW-c4v"/>
         <segue reference="U9Y-S1-8Pa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.52549019610000003" green="0.32549019610000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>

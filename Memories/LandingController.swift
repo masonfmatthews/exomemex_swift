@@ -25,9 +25,11 @@ class LandingController: UIViewController {
         
         self.userApi = GetUserApi(user_id: session.id!)
         
+        // TODO: Needs to reload when we come BACK to the landing controller.
         let questionCount = self.userApi!.getOpenQuestionCount()
         if questionCount > 0 {
-            self.interviewLabel.text = "(\(questionCount) Questions from Friends and Family)"
+            let word = (questionCount == 1 ? "Question" : "Questions")
+            self.interviewLabel.text = "(\(questionCount) \(word) from Friends & Family!)"
         } else {
             self.interviewLabel.text = ""
         }
@@ -35,6 +37,13 @@ class LandingController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "beInterviewed" {
+            let controller = segue.destinationViewController as! TopicsController
+            controller.openQuestions = self.userApi!.getOpenQuestions()
+        }
     }
     
 }

@@ -27,6 +27,16 @@ class TopicsController: UITableViewController {
                 backItem.title = "Topics"
                 navigationItem.backBarButtonItem = backItem
             }
+        } else if segue.identifier == "answerOpenQuestion" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let question = openQuestions[indexPath.row]
+                let controller = segue.destinationViewController as! RecordController
+                controller.question = question
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "Questions"
+                navigationItem.backBarButtonItem = backItem
+            }
         }
     }
     
@@ -60,15 +70,21 @@ class TopicsController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         if openQuestions.count > 0 && indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("QuestionCell", forIndexPath: indexPath)
             let question = openQuestions[indexPath.row]
             cell.textLabel!.text = "\(question.question)"
+            // TODO: These prototype cells should have been a bigger size!  Why not?
+            cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            cell.textLabel!.numberOfLines = 3
+            return cell
         } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
             let topic = topics[indexPath.row]
             cell.textLabel!.text = "\(topic.name)"
+            return cell
         }
-        return cell
+        
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

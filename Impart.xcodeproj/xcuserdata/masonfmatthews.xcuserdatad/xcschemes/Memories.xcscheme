@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0561F341C24839E00213F33"
                BuildableName = "Journeology.app"
-               BlueprintName = "Journeology"
-               ReferencedContainer = "container:Journeology.xcodeproj">
+               BlueprintName = "Impart"
+               ReferencedContainer = "container:Impart.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0561F481C24839E00213F33"
-               BuildableName = "Journeology.xctest"
-               BlueprintName = "JourneologyTests"
-               ReferencedContainer = "container:Journeology.xcodeproj">
+               BuildableName = "Impart.xctest"
+               BlueprintName = "ImpartTests"
+               ReferencedContainer = "container:Impart.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0561F531C24839E00213F33"
-               BuildableName = "Journeology.xctest"
-               BlueprintName = "JourneologyUITests"
-               ReferencedContainer = "container:Journeology.xcodeproj">
+               BuildableName = "Impart.xctest"
+               BlueprintName = "ImpartUITests"
+               ReferencedContainer = "container:Impart.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,8 +54,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0561F341C24839E00213F33"
             BuildableName = "Journeology.app"
-            BlueprintName = "Journeology"
-            ReferencedContainer = "container:Journeology.xcodeproj">
+            BlueprintName = "Impart"
+            ReferencedContainer = "container:Impart.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -77,8 +77,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0561F341C24839E00213F33"
             BuildableName = "Journeology.app"
-            BlueprintName = "Journeology"
-            ReferencedContainer = "container:Journeology.xcodeproj">
+            BlueprintName = "Impart"
+            ReferencedContainer = "container:Impart.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,8 +96,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0561F341C24839E00213F33"
             BuildableName = "Journeology.app"
-            BlueprintName = "Journeology"
-            ReferencedContainer = "container:Journeology.xcodeproj">
+            BlueprintName = "Impart"
+            ReferencedContainer = "container:Impart.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,14 +1,6 @@
-//
-//  MemoriesUITests.swift
-//  MemoriesUITests
-//
-//  Created by Mason F. Matthews on 12/18/15.
-//  Copyright © 2015 Mason F. Matthews. All rights reserved.
-//
-
 import XCTest
 
-class MemoriesUITests: XCTestCase {
+class ImpartUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

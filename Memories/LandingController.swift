@@ -15,7 +15,7 @@ class LandingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Journeology"
+        self.title = "Impart"
         
         Style.primaryButton(self.journalButton)
         Style.primaryButton(self.interviewButton)

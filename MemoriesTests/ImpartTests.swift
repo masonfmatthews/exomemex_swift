@@ -1,15 +1,7 @@
-//
-//  MemoriesTests.swift
-//  MemoriesTests
-//
-//  Created by Mason F. Matthews on 12/18/15.
-//  Copyright © 2015 Mason F. Matthews. All rights reserved.
-//
-
 import XCTest
-@testable import Memories
+@testable import Impart
 
-class MemoriesTests: XCTestCase {
+class ImpartTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

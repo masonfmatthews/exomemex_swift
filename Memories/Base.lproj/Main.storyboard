@@ -9,7 +9,7 @@
         <!--LandingController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LandingController" id="BYZ-38-t0r" customClass="LandingController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LandingController" id="BYZ-38-t0r" customClass="LandingController" customModule="Impart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -159,7 +159,7 @@
         <!--Old Clips Controller-->
         <scene sceneID="12M-L6-C8A">
             <objects>
-                <tableViewController id="ZH2-TG-oyS" customClass="OldClipsController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZH2-TG-oyS" customClass="OldClipsController" customModule="Impart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2JG-He-Ifg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,7 @@
         <!--Play Clip Controller-->
         <scene sceneID="ZqD-si-7TN">
             <objects>
-                <viewController id="TnH-If-P0H" customClass="PlayClipController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TnH-If-P0H" customClass="PlayClipController" customModule="Impart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ajv-oY-1BD"/>
                         <viewControllerLayoutGuide type="bottom" id="UId-df-q47"/>
@@ -266,7 +266,7 @@
         <!--Record Controller-->
         <scene sceneID="llQ-zq-Xhf">
             <objects>
-                <viewController id="Pzk-GN-SIr" customClass="RecordController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pzk-GN-SIr" customClass="RecordController" customModule="Impart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7g9-I8-Q8g"/>
                         <viewControllerLayoutGuide type="bottom" id="9zT-Lm-WW3"/>
@@ -390,13 +390,13 @@
         <!--Choose Listeners Controller-->
         <scene sceneID="Mmc-km-WwL">
             <objects>
-                <tableViewController id="WeJ-7q-Pmj" customClass="ChooseListenersController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="WeJ-7q-Pmj" customClass="ChooseListenersController" customModule="Impart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Zo-sD-KWD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="BXb-lM-k0f" customClass="ChooseListenerCell" customModule="Journeology" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="BXb-lM-k0f" customClass="ChooseListenerCell" customModule="Impart" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BXb-lM-k0f" id="Hhm-0z-KTY">
@@ -449,7 +449,7 @@
         <!--LoginController-->
         <scene sceneID="nRS-ax-EZg">
             <objects>
-                <viewController storyboardIdentifier="LoginController" title="LoginController" id="5KW-Ap-eq4" customClass="LoginController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" title="LoginController" id="5KW-Ap-eq4" customClass="LoginController" customModule="Impart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dqe-6C-kZj"/>
                         <viewControllerLayoutGuide type="bottom" id="fxz-ry-0hz"/>
@@ -501,8 +501,8 @@
                                             <constraint firstAttribute="height" constant="126" id="uM8-po-iu4"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Journeology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bH-3e-jgK">
-                                        <rect key="frame" x="51" y="317" width="272" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Impart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bH-3e-jgK">
+                                        <rect key="frame" x="51" y="317" width="272" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="272" id="1EB-pK-gU9"/>
                                             <constraint firstAttribute="height" constant="32" id="wHG-D7-ppM"/>
@@ -580,7 +580,7 @@
         <!--Listeners Controller-->
         <scene sceneID="DXX-Uk-hwv">
             <objects>
-                <tableViewController id="XxL-ve-uZR" customClass="ListenersController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XxL-ve-uZR" customClass="ListenersController" customModule="Impart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="edG-VZ-feW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -618,7 +618,7 @@
         <!--Topics Controller-->
         <scene sceneID="0ps-i4-eWC">
             <objects>
-                <tableViewController id="jCy-Me-53F" customClass="TopicsController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jCy-Me-53F" customClass="TopicsController" customModule="Impart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fNQ-Ya-puu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -660,7 +660,7 @@
         <!--Questions Controller-->
         <scene sceneID="zrZ-mT-LcT">
             <objects>
-                <tableViewController id="gpX-eY-hB4" customClass="QuestionsController" customModule="Journeology" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="gpX-eY-hB4" customClass="QuestionsController" customModule="Impart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fSL-QI-NeW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

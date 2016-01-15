@@ -15,8 +15,8 @@
 		B0561F3E1C24839E00213F33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0561F3C1C24839E00213F33 /* Main.storyboard */; };
 		B0561F401C24839E00213F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0561F3F1C24839E00213F33 /* Assets.xcassets */; };
 		B0561F431C24839E00213F33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0561F411C24839E00213F33 /* LaunchScreen.storyboard */; };
-		B0561F4E1C24839E00213F33 /* MemoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F4D1C24839E00213F33 /* MemoriesTests.swift */; };
-		B0561F591C24839E00213F33 /* MemoriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F581C24839E00213F33 /* MemoriesUITests.swift */; };
+		B0561F4E1C24839E00213F33 /* ImpartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F4D1C24839E00213F33 /* ImpartTests.swift */; };
+		B0561F591C24839E00213F33 /* ImpartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0561F581C24839E00213F33 /* ImpartUITests.swift */; };
 		B0611E641C3D75DD00BBFD22 /* ChooseListenersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0611E631C3D75DD00BBFD22 /* ChooseListenersController.swift */; };
 		B0611E661C3D79FB00BBFD22 /* ChooseListenerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0611E651C3D79FB00BBFD22 /* ChooseListenerCell.swift */; };
 		B07AA65B1C28719F00695F96 /* CreateListenerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AA65A1C28719F00695F96 /* CreateListenerApi.swift */; };
@@ -65,17 +65,17 @@
 		B02DE83A1C44164600BC7A40 /* QuestionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsController.swift; sourceTree = "<group>"; };
 		B02DE83C1C44169F00BC7A40 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B02DE83E1C44183500BC7A40 /* GetUserApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserApi.swift; sourceTree = "<group>"; };
-		B0561F351C24839E00213F33 /* Journeology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journeology.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0561F351C24839E00213F33 /* Impart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Impart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0561F381C24839E00213F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0561F3D1C24839E00213F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0561F3F1C24839E00213F33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0561F421C24839E00213F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0561F441C24839E00213F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0561F491C24839E00213F33 /* Journeology.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Journeology.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0561F4D1C24839E00213F33 /* MemoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTests.swift; sourceTree = "<group>"; };
+		B0561F491C24839E00213F33 /* Impart.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Impart.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0561F4D1C24839E00213F33 /* ImpartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpartTests.swift; sourceTree = "<group>"; };
 		B0561F4F1C24839E00213F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0561F541C24839E00213F33 /* Journeology.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Journeology.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0561F581C24839E00213F33 /* MemoriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesUITests.swift; sourceTree = "<group>"; };
+		B0561F541C24839E00213F33 /* Impart.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Impart.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0561F581C24839E00213F33 /* ImpartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpartUITests.swift; sourceTree = "<group>"; };
 		B0561F5A1C24839E00213F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0611E631C3D75DD00BBFD22 /* ChooseListenersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseListenersController.swift; sourceTree = "<group>"; };
 		B0611E651C3D79FB00BBFD22 /* ChooseListenerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseListenerCell.swift; sourceTree = "<group>"; };
@@ -131,9 +131,9 @@
 		B0561F2C1C24839E00213F33 = {
 			isa = PBXGroup;
 			children = (
-				B0561F371C24839E00213F33 /* Memories */,
-				B0561F4C1C24839E00213F33 /* MemoriesTests */,
-				B0561F571C24839E00213F33 /* MemoriesUITests */,
+				B0561F371C24839E00213F33 /* Impart */,
+				B0561F4C1C24839E00213F33 /* ImpartTests */,
+				B0561F571C24839E00213F33 /* ImpartUITests */,
 				B0561F361C24839E00213F33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,14 +141,14 @@
 		B0561F361C24839E00213F33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B0561F351C24839E00213F33 /* Journeology.app */,
-				B0561F491C24839E00213F33 /* Journeology.xctest */,
-				B0561F541C24839E00213F33 /* Journeology.xctest */,
+				B0561F351C24839E00213F33 /* Impart.app */,
+				B0561F491C24839E00213F33 /* Impart.xctest */,
+				B0561F541C24839E00213F33 /* Impart.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B0561F371C24839E00213F33 /* Memories */ = {
+		B0561F371C24839E00213F33 /* Impart */ = {
 			isa = PBXGroup;
 			children = (
 				B07AA6701C2B43F300695F96 /* Api */,
@@ -171,24 +171,27 @@
 				B0AA2D451C47F48600ECD98A /* TopicsController.swift */,
 				B02DE83A1C44164600BC7A40 /* QuestionsController.swift */,
 			);
+			name = Impart;
 			path = Memories;
 			sourceTree = "<group>";
 		};
-		B0561F4C1C24839E00213F33 /* MemoriesTests */ = {
+		B0561F4C1C24839E00213F33 /* ImpartTests */ = {
 			isa = PBXGroup;
 			children = (
-				B0561F4D1C24839E00213F33 /* MemoriesTests.swift */,
+				B0561F4D1C24839E00213F33 /* ImpartTests.swift */,
 				B0561F4F1C24839E00213F33 /* Info.plist */,
 			);
+			name = ImpartTests;
 			path = MemoriesTests;
 			sourceTree = "<group>";
 		};
-		B0561F571C24839E00213F33 /* MemoriesUITests */ = {
+		B0561F571C24839E00213F33 /* ImpartUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B0561F581C24839E00213F33 /* MemoriesUITests.swift */,
+				B0561F581C24839E00213F33 /* ImpartUITests.swift */,
 				B0561F5A1C24839E00213F33 /* Info.plist */,
 			);
+			name = ImpartUITests;
 			path = MemoriesUITests;
 			sourceTree = "<group>";
 		};
@@ -233,9 +236,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B0561F341C24839E00213F33 /* Journeology */ = {
+		B0561F341C24839E00213F33 /* Impart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B0561F5D1C24839E00213F33 /* Build configuration list for PBXNativeTarget "Journeology" */;
+			buildConfigurationList = B0561F5D1C24839E00213F33 /* Build configuration list for PBXNativeTarget "Impart" */;
 			buildPhases = (
 				B0561F311C24839E00213F33 /* Sources */,
 				B0561F321C24839E00213F33 /* Frameworks */,
@@ -245,14 +248,14 @@
 			);
 			dependencies = (
 			);
-			name = Journeology;
+			name = Impart;
 			productName = Memories;
-			productReference = B0561F351C24839E00213F33 /* Journeology.app */;
+			productReference = B0561F351C24839E00213F33 /* Impart.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B0561F481C24839E00213F33 /* JourneologyTests */ = {
+		B0561F481C24839E00213F33 /* ImpartTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B0561F601C24839E00213F33 /* Build configuration list for PBXNativeTarget "JourneologyTests" */;
+			buildConfigurationList = B0561F601C24839E00213F33 /* Build configuration list for PBXNativeTarget "ImpartTests" */;
 			buildPhases = (
 				B0561F451C24839E00213F33 /* Sources */,
 				B0561F461C24839E00213F33 /* Frameworks */,
@@ -263,14 +266,14 @@
 			dependencies = (
 				B0561F4B1C24839E00213F33 /* PBXTargetDependency */,
 			);
-			name = JourneologyTests;
+			name = ImpartTests;
 			productName = MemoriesTests;
-			productReference = B0561F491C24839E00213F33 /* Journeology.xctest */;
+			productReference = B0561F491C24839E00213F33 /* Impart.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B0561F531C24839E00213F33 /* JourneologyUITests */ = {
+		B0561F531C24839E00213F33 /* ImpartUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B0561F631C24839E00213F33 /* Build configuration list for PBXNativeTarget "JourneologyUITests" */;
+			buildConfigurationList = B0561F631C24839E00213F33 /* Build configuration list for PBXNativeTarget "ImpartUITests" */;
 			buildPhases = (
 				B0561F501C24839E00213F33 /* Sources */,
 				B0561F511C24839E00213F33 /* Frameworks */,
@@ -281,9 +284,9 @@
 			dependencies = (
 				B0561F561C24839E00213F33 /* PBXTargetDependency */,
 			);
-			name = JourneologyUITests;
+			name = ImpartUITests;
 			productName = MemoriesUITests;
-			productReference = B0561F541C24839E00213F33 /* Journeology.xctest */;
+			productReference = B0561F541C24839E00213F33 /* Impart.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -310,7 +313,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B0561F301C24839E00213F33 /* Build configuration list for PBXProject "Journeology" */;
+			buildConfigurationList = B0561F301C24839E00213F33 /* Build configuration list for PBXProject "Impart" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -323,9 +326,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B0561F341C24839E00213F33 /* Journeology */,
-				B0561F481C24839E00213F33 /* JourneologyTests */,
-				B0561F531C24839E00213F33 /* JourneologyUITests */,
+				B0561F341C24839E00213F33 /* Impart */,
+				B0561F481C24839E00213F33 /* ImpartTests */,
+				B0561F531C24839E00213F33 /* ImpartUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -398,7 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0561F4E1C24839E00213F33 /* MemoriesTests.swift in Sources */,
+				B0561F4E1C24839E00213F33 /* ImpartTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0561F591C24839E00213F33 /* MemoriesUITests.swift in Sources */,
+				B0561F591C24839E00213F33 /* ImpartUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,12 +418,12 @@
 /* Begin PBXTargetDependency section */
 		B0561F4B1C24839E00213F33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B0561F341C24839E00213F33 /* Journeology */;
+			target = B0561F341C24839E00213F33 /* Impart */;
 			targetProxy = B0561F4A1C24839E00213F33 /* PBXContainerItemProxy */;
 		};
 		B0561F561C24839E00213F33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B0561F341C24839E00213F33 /* Journeology */;
+			target = B0561F341C24839E00213F33 /* Impart */;
 			targetProxy = B0561F551C24839E00213F33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -536,8 +539,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Memories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.exomemex.journeology;
-				PRODUCT_NAME = Journeology;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.impart-app";
+				PRODUCT_NAME = Impart;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -550,8 +553,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Memories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.exomemex.journeology;
-				PRODUCT_NAME = Journeology;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.impart-app";
+				PRODUCT_NAME = Impart;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -563,8 +566,8 @@
 				INFOPLIST_FILE = MemoriesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.exomemex.MemoriesTests;
-				PRODUCT_NAME = Journeology;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Journeology.app/Journeology";
+				PRODUCT_NAME = Impart;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Impart.app/Impart";
 			};
 			name = Debug;
 		};
@@ -575,8 +578,8 @@
 				INFOPLIST_FILE = MemoriesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.exomemex.MemoriesTests;
-				PRODUCT_NAME = Journeology;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Journeology.app/Journeology";
+				PRODUCT_NAME = Impart;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Impart.app/Impart";
 			};
 			name = Release;
 		};
@@ -587,7 +590,7 @@
 				INFOPLIST_FILE = MemoriesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.exomemex.MemoriesUITests;
-				PRODUCT_NAME = Journeology;
+				PRODUCT_NAME = Impart;
 				TEST_TARGET_NAME = Memories;
 				USES_XCTRUNNER = YES;
 			};
@@ -599,7 +602,7 @@
 				INFOPLIST_FILE = MemoriesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.exomemex.MemoriesUITests;
-				PRODUCT_NAME = Journeology;
+				PRODUCT_NAME = Impart;
 				TEST_TARGET_NAME = Memories;
 				USES_XCTRUNNER = YES;
 			};
@@ -608,7 +611,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B0561F301C24839E00213F33 /* Build configuration list for PBXProject "Journeology" */ = {
+		B0561F301C24839E00213F33 /* Build configuration list for PBXProject "Impart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B0561F5B1C24839E00213F33 /* Debug */,
@@ -617,7 +620,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B0561F5D1C24839E00213F33 /* Build configuration list for PBXNativeTarget "Journeology" */ = {
+		B0561F5D1C24839E00213F33 /* Build configuration list for PBXNativeTarget "Impart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B0561F5E1C24839E00213F33 /* Debug */,
@@ -626,7 +629,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B0561F601C24839E00213F33 /* Build configuration list for PBXNativeTarget "JourneologyTests" */ = {
+		B0561F601C24839E00213F33 /* Build configuration list for PBXNativeTarget "ImpartTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B0561F611C24839E00213F33 /* Debug */,
@@ -635,7 +638,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B0561F631C24839E00213F33 /* Build configuration list for PBXNativeTarget "JourneologyUITests" */ = {
+		B0561F631C24839E00213F33 /* Build configuration list for PBXNativeTarget "ImpartUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B0561F641C24839E00213F33 /* Debug */,

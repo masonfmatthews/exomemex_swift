@@ -76,7 +76,6 @@ class TopicsController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("QuestionCell", forIndexPath: indexPath)
             let question = openQuestions[indexPath.row]
             cell.textLabel!.text = "\(question.question)"
-            // TODO: These prototype cells should have been a bigger size!  Why not?
             cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
             cell.textLabel!.numberOfLines = 3
             return cell

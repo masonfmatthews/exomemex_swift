@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0561F341C24839E00213F33"
-               BuildableName = "Journeology.app"
+               BuildableName = "Impart.app"
                BlueprintName = "Impart"
                ReferencedContainer = "container:Impart.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0561F341C24839E00213F33"
-            BuildableName = "Journeology.app"
+            BuildableName = "Impart.app"
             BlueprintName = "Impart"
             ReferencedContainer = "container:Impart.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0561F341C24839E00213F33"
-            BuildableName = "Journeology.app"
+            BuildableName = "Impart.app"
             BlueprintName = "Impart"
             ReferencedContainer = "container:Impart.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0561F341C24839E00213F33"
-            BuildableName = "Journeology.app"
+            BuildableName = "Impart.app"
             BlueprintName = "Impart"
             ReferencedContainer = "container:Impart.xcodeproj">
          </BuildableReference>

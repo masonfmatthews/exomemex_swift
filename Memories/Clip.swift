@@ -5,5 +5,4 @@ struct Clip {
     let name: String
     let url: String
     let keywords = [String]()
-    let transcript: String?
 }

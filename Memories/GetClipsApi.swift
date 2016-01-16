@@ -24,8 +24,7 @@ final class GetClipsApi : Api {
             for result in json! {
                 clips.append(Clip(id: result["id"] as! Int,
                     name: result["name"] as! String,
-                    url: result["url"] as! String,
-                    transcript: result["transcript"] as? String))
+                    url: result["url"] as! String))
             }
             return clips
         } else {

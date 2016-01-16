@@ -38,8 +38,25 @@ final class GetUserApi : Api {
             var questions:[Question] = []
             let array = json!["open_questions"] as! [[String: AnyObject]]
             for result in array {
+                var asker: User?
+                let askerDetails = result["asker"] as? [String: AnyObject]
+                if askerDetails != nil {
+                    asker = User(id: askerDetails!["id"] as! Int,
+                        name: askerDetails!["name"] as! String,
+                        email: askerDetails!["email"] as! String)
+                }
+                
+                var leadingClip: Clip?
+                let clipDetails = result["asker"] as? [String: AnyObject]
+                if clipDetails != nil {
+                    asker = Clip(id: clipDetails!["id"] as! Int,
+                        name: clipDetails!["name"] as! String,
+                        url: clipDetails!["url"] as! String)
+                }
                 questions.append(Question(id: result["id"] as! Int,
-                    question: result["question"] as! String))
+                    question: result["question"] as! String,
+                    asker: asker,
+                    leadingClip: leadingClip))
             }
             return questions
         } else {

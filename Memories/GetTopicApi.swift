@@ -30,7 +30,9 @@ final class GetTopicApi : Api {
             let array = json!["questions"] as! [[String: AnyObject]]
             for result in array {
                 questions.append(Question(id: result["id"] as! Int,
-                    question: result["question"] as! String))
+                    question: result["question"] as! String,
+                    asker: nil,
+                    leadingClip: nil))
             }
             return questions
         } else {

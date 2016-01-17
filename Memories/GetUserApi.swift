@@ -47,7 +47,7 @@ final class GetUserApi : Api {
                 }
                 
                 var leadingClip: Clip?
-                let clipDetails = result["asker"] as? [String: AnyObject]
+                let clipDetails = result["leading_clip"] as? [String: AnyObject]
                 if clipDetails != nil {
                     leadingClip = Clip(id: clipDetails!["id"] as! Int,
                         name: clipDetails!["name"] as! String,

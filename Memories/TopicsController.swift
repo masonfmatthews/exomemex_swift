@@ -75,7 +75,13 @@ class TopicsController: UITableViewController {
         if openQuestions.count > 0 && indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("QuestionCell", forIndexPath: indexPath)
             let question = openQuestions[indexPath.row]
-            cell.textLabel!.text = "\(question.question)"
+            
+            var labelText = ""
+            if let asker = question.asker {
+                labelText += "\(asker.name): "
+            }
+            labelText += "\"\(question.question)\""
+            cell.textLabel!.text = labelText
             cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
             cell.textLabel!.numberOfLines = 3
             return cell

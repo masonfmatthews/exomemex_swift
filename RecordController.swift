@@ -7,6 +7,8 @@ class RecordController: UIViewController {
     var audioRecorder : AVAudioRecorder?
     var question : Question?
     
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var innerRecordButton: UIButton!
     @IBOutlet weak var outerRecordButton: UIButton!
@@ -46,12 +48,22 @@ class RecordController: UIViewController {
         self.outerRecordButton.addTarget(self, action: "record", forControlEvents: .TouchUpInside)
         
         if self.question == nil {
+            self.questionLabel.hidden = true
             let formatter = NSDateFormatter()
             formatter.dateStyle = .LongStyle
             formatter.timeStyle = .NoStyle
             self.nameField.text = formatter.stringFromDate(NSDate())
         } else {
+            var labelText = self.question!.question
+            if let asker = self.question!.asker {
+                labelText += "\n- \(asker.name)"
+            }
+            self.questionLabel.text = labelText
+            self.questionLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            self.questionLabel.numberOfLines = 4
+            self.nameLabel.hidden = true
             self.nameField.text = self.question!.question
+            self.nameField.hidden = true
         }
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -83,7 +95,6 @@ class RecordController: UIViewController {
         if (audioSession.respondsToSelector("requestRecordPermission:")) {
             AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
                 if granted {
-                    //print("granted")
                     
                     //set category and activate recorder session
                     try! audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -93,8 +104,6 @@ class RecordController: UIViewController {
                     let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
                     self.filePath = documentsDirectory + "/voiceRecording.wav"
                     let url = NSURL.fileURLWithPath(self.filePath!)
-                    
-                    //print(url)
                     
                     //create AnyObject of settings
                     let settings: [String : AnyObject] = [

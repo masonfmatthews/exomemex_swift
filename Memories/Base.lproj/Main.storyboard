@@ -319,8 +319,8 @@
                                 </constraints>
                                 <state key="normal" title="Inner"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Then, hit the record button and speak:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GN-oY-TVi">
-                                <rect key="frame" x="41" y="252" width="294" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hit the record button and speak:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GN-oY-TVi">
+                                <rect key="frame" x="64" y="252" width="248" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -353,13 +353,25 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-cD-RBg">
+                                <rect key="frame" x="41" y="94" width="294" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="DQT-qF-RRE"/>
+                                    <constraint firstAttribute="height" constant="100" id="mva-aR-Qhd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iCM-c8-zw5" firstAttribute="top" secondItem="9De-HB-Xkz" secondAttribute="bottom" constant="20" id="23E-X4-tJi"/>
+                            <constraint firstItem="PYC-cD-RBg" firstAttribute="centerX" secondItem="I4w-IO-6DE" secondAttribute="centerX" id="4MA-iG-8Dl"/>
                             <constraint firstItem="iCM-c8-zw5" firstAttribute="centerX" secondItem="I4w-IO-6DE" secondAttribute="centerX" id="6Dd-ld-SpF"/>
                             <constraint firstItem="9zT-Lm-WW3" firstAttribute="top" secondItem="iCM-c8-zw5" secondAttribute="bottom" constant="59" id="6TI-e4-6Vi"/>
                             <constraint firstItem="bOv-5h-312" firstAttribute="top" secondItem="0GN-oY-TVi" secondAttribute="bottom" constant="16" id="7h0-fI-KVW"/>
+                            <constraint firstItem="PYC-cD-RBg" firstAttribute="top" secondItem="7g9-I8-Q8g" secondAttribute="bottom" constant="30" id="8nf-wb-46X"/>
                             <constraint firstItem="9De-HB-Xkz" firstAttribute="centerX" secondItem="I4w-IO-6DE" secondAttribute="centerX" id="9yV-aT-ByS"/>
                             <constraint firstItem="9De-HB-Xkz" firstAttribute="top" secondItem="bSt-IZ-Hhl" secondAttribute="bottom" constant="16" id="AHw-at-3di"/>
                             <constraint firstItem="bgZ-tB-E2m" firstAttribute="centerY" secondItem="I4w-IO-6DE" secondAttribute="centerY" id="DvJ-Kx-0hr"/>
@@ -378,7 +390,9 @@
                     <connections>
                         <outlet property="innerRecordButton" destination="bgZ-tB-E2m" id="jFl-J8-O9A"/>
                         <outlet property="nameField" destination="azC-5y-gWM" id="SvS-0p-v0B"/>
+                        <outlet property="nameLabel" destination="re8-sM-WeR" id="hk6-36-59A"/>
                         <outlet property="outerRecordButton" destination="bOv-5h-312" id="vzL-P8-znS"/>
+                        <outlet property="questionLabel" destination="PYC-cD-RBg" id="sIR-Qz-G98"/>
                         <outlet property="resetButton" destination="9De-HB-Xkz" id="FJN-a2-Skj"/>
                         <outlet property="saveButton" destination="iCM-c8-zw5" id="n1f-qx-VYG"/>
                     </connections>

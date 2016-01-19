@@ -40,6 +40,8 @@
 		B0AA2D441C47F29600ECD98A /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D431C47F29600ECD98A /* Topic.swift */; };
 		B0AA2D461C47F48600ECD98A /* TopicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D451C47F48600ECD98A /* TopicsController.swift */; };
 		B0AA2D481C47F9C200ECD98A /* GetTopicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D471C47F9C200ECD98A /* GetTopicApi.swift */; };
+		B0AA2D4A1C4EABA700ECD98A /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0AA2D491C4EABA700ECD98A /* fontawesome-webfont.ttf */; };
+		B0AA2D4C1C4EAE1900ECD98A /* TopicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D4B1C4EAE1900ECD98A /* TopicsCell.swift */; };
 		B0FCCE171C28675E009FECB0 /* GetListenersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		B0AA2D431C47F29600ECD98A /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		B0AA2D451C47F48600ECD98A /* TopicsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsController.swift; sourceTree = "<group>"; };
 		B0AA2D471C47F9C200ECD98A /* GetTopicApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopicApi.swift; sourceTree = "<group>"; };
+		B0AA2D491C4EABA700ECD98A /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		B0AA2D4B1C4EAE1900ECD98A /* TopicsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsCell.swift; sourceTree = "<group>"; };
 		B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListenersApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +135,7 @@
 		B0561F2C1C24839E00213F33 = {
 			isa = PBXGroup;
 			children = (
+				B0AA2D491C4EABA700ECD98A /* fontawesome-webfont.ttf */,
 				B0561F371C24839E00213F33 /* Impart */,
 				B0561F4C1C24839E00213F33 /* ImpartTests */,
 				B0561F571C24839E00213F33 /* ImpartUITests */,
@@ -170,6 +175,7 @@
 				B07AA67D1C3AF6A900695F96 /* ListenersController.swift */,
 				B0AA2D451C47F48600ECD98A /* TopicsController.swift */,
 				B02DE83A1C44164600BC7A40 /* QuestionsController.swift */,
+				B0AA2D4B1C4EAE1900ECD98A /* TopicsCell.swift */,
 			);
 			name = Impart;
 			path = Memories;
@@ -339,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0561F431C24839E00213F33 /* LaunchScreen.storyboard in Resources */,
+				B0AA2D4A1C4EABA700ECD98A /* fontawesome-webfont.ttf in Resources */,
 				B0561F401C24839E00213F33 /* Assets.xcassets in Resources */,
 				B0561F3E1C24839E00213F33 /* Main.storyboard in Resources */,
 			);
@@ -390,6 +397,7 @@
 				B0611E641C3D75DD00BBFD22 /* ChooseListenersController.swift in Sources */,
 				B0AA2D481C47F9C200ECD98A /* GetTopicApi.swift in Sources */,
 				B07AA67C1C3AC07100695F96 /* PlayClipController.swift in Sources */,
+				B0AA2D4C1C4EAE1900ECD98A /* TopicsCell.swift in Sources */,
 				B07AA6741C2B4A1D00695F96 /* Api.swift in Sources */,
 				B07AA6631C29CE5F00695F96 /* Clip.swift in Sources */,
 				B02DE8391C4033C300BC7A40 /* Style.swift in Sources */,

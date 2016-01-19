@@ -87,9 +87,10 @@ class TopicsController: UITableViewController {
             cell.textLabel!.textColor = Style.importantColor
             return cell
         } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TopicsCell
             let topic = topics[indexPath.row]
-            cell.textLabel!.text = "\(topic.name)"
+            cell.topicText.text = topic.name
+            cell.topicIcon.text = topic.icon
             return cell
         }
         

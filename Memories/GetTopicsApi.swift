@@ -21,7 +21,10 @@ final class GetTopicsApi : Api {
         if json != nil {
             var topics:[Topic] = []
             for result in json! {
-                topics.append(Topic(id: result["id"] as! Int, name: result["name"] as! String))
+                topics.append(Topic(id: result["id"] as! Int,
+                    name: result["name"] as! String,
+                    icon: "\u{f082}"
+                ))
             }
             return topics
         } else {

@@ -24,7 +24,7 @@ final class GetTopicsApi : Api {
                 topics.append(Topic(id: result["id"] as! Int,
                     name: result["name"] as! String,
                     icon: result["icon_code"] as! String,
-                    remainingQuestions: 3
+                    remainingQuestions: result["remaining_question_count"] as! Int
                 ))
             }
             return topics

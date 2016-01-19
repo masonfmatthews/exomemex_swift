@@ -174,8 +174,8 @@
 				B07AA67B1C3AC07100695F96 /* PlayClipController.swift */,
 				B07AA67D1C3AF6A900695F96 /* ListenersController.swift */,
 				B0AA2D451C47F48600ECD98A /* TopicsController.swift */,
-				B02DE83A1C44164600BC7A40 /* QuestionsController.swift */,
 				B0AA2D4B1C4EAE1900ECD98A /* TopicsCell.swift */,
+				B02DE83A1C44164600BC7A40 /* QuestionsController.swift */,
 			);
 			name = Impart;
 			path = Memories;

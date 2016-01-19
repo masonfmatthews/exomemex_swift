@@ -91,6 +91,9 @@ class TopicsController: UITableViewController {
             let topic = topics[indexPath.row]
             cell.topicText.text = topic.name
             cell.topicIcon.text = topic.icon
+            cell.questionCount.text = "\(topic.remainingQuestions)"
+            cell.questionCount.layer.masksToBounds = true
+            cell.questionCount.layer.cornerRadius = 10
             return cell
         }
         

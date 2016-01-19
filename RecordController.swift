@@ -18,12 +18,13 @@ class RecordController: UIViewController {
     @IBAction func resetRecording(sender: AnyObject) {
         self.audioRecorder!.deleteRecording()
         
-        self.innerRecordButton.backgroundColor = UIColor.redColor()
+        self.innerRecordButton.layer.removeAllAnimations()
         Style.disabledPrimaryButton(self.saveButton)
         Style.disabledSecondaryButton(self.resetButton)
     }
     
     @IBAction func saveRecording(sender: AnyObject) {
+        self.innerRecordButton.layer.removeAllAnimations()
         self.audioRecorder!.stop()
     }
     
@@ -119,10 +120,17 @@ class RecordController: UIViewController {
                     try! self.audioRecorder = AVAudioRecorder(URL: url, settings: settings)
                     self.audioRecorder!.record()
                     
-                    self.innerRecordButton.backgroundColor = UIColor.lightGrayColor()
-                    
                     Style.primaryButton(self.saveButton)
                     Style.secondaryButton(self.resetButton)
+                    
+                    let pulseAnimation = CABasicAnimation(keyPath: "opacity")
+                    pulseAnimation.duration = 1.2
+                    pulseAnimation.fromValue = 0
+                    pulseAnimation.toValue = 1
+                    pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+                    pulseAnimation.autoreverses = true
+                    pulseAnimation.repeatCount = FLT_MAX
+                    self.innerRecordButton.layer.addAnimation(pulseAnimation, forKey: nil)
                     
                 } else{
                     print("Permission not granted!")

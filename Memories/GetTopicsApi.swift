@@ -23,7 +23,7 @@ final class GetTopicsApi : Api {
             for result in json! {
                 topics.append(Topic(id: result["id"] as! Int,
                     name: result["name"] as! String,
-                    icon: "\u{f082}"
+                    icon: result["icon_code"] as! String
                 ))
             }
             return topics

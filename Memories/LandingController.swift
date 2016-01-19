@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class LandingController: UIViewController {
     
@@ -34,6 +35,13 @@ class LandingController: UIViewController {
         } else {
             self.interviewLabel.text = ""
         }
+        
+        //TODO: Better way to do a no-op?
+        AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
+            if granted==false {
+                print("Microphone access denied.")
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {

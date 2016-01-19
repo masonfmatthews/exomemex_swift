@@ -101,19 +101,17 @@ class RecordController: UIViewController {
                     try! audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
                     try! audioSession.setActive(true)
                     
-                    //get documnets directory
+                    //get documents directory
                     let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
                     self.filePath = documentsDirectory + "/voiceRecording.wav"
                     let url = NSURL.fileURLWithPath(self.filePath!)
                     
                     //create AnyObject of settings
                     let settings: [String : AnyObject] = [
-                        AVFormatIDKey:Int(kAudioFormatLinearPCM), //Int required in Swift2
-                        AVSampleRateKey:44100.0,
+                        AVFormatIDKey:Int(kAudioFormatLinearPCM),
+                        AVSampleRateKey:16000.0,
                         AVNumberOfChannelsKey:1,
-                        AVEncoderBitRateKey:12800,
-                        AVLinearPCMBitDepthKey:8,
-                        AVEncoderAudioQualityKey:AVAudioQuality.Max.rawValue
+                        AVLinearPCMBitDepthKey:16
                     ]
                     
                     //record

@@ -84,6 +84,7 @@ class TopicsController: UITableViewController {
             cell.textLabel!.text = labelText
             cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
             cell.textLabel!.numberOfLines = 3
+            cell.textLabel!.textColor = Style.importantColor
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)

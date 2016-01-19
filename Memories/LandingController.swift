@@ -30,6 +30,7 @@ class LandingController: UIViewController {
         if questionCount > 0 {
             let word = (questionCount == 1 ? "Question" : "Questions")
             self.interviewLabel.text = "(\(questionCount) \(word) from Friends & Family!)"
+            self.interviewLabel.textColor = Style.importantColor
         } else {
             self.interviewLabel.text = ""
         }

@@ -3,6 +3,7 @@ import Foundation
 struct Question {
     let id : Int
     let question : String
-    let asker : User?
-    let leadingClip : Clip?
+    var answered : Bool
+    var asker : User?
+    var leadingClip : Clip?
 }

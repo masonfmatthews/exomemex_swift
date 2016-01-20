@@ -55,6 +55,7 @@ final class GetUserApi : Api {
                 }
                 questions.append(Question(id: result["id"] as! Int,
                     question: result["question"] as! String,
+                    answered: false,
                     asker: asker,
                     leadingClip: leadingClip))
             }

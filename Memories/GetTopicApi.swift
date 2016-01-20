@@ -31,6 +31,7 @@ final class GetTopicApi : Api {
             for result in array {
                 questions.append(Question(id: result["id"] as! Int,
                     question: result["question"] as! String,
+                    answered: result["answered"] as! Bool,
                     asker: nil,
                     leadingClip: nil))
             }

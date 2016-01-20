@@ -8,6 +8,7 @@
     <customFonts key="customFonts">
         <mutableArray key="fontawesome-webfont.ttf">
             <string>FontAwesome</string>
+            <string>FontAwesome</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -712,14 +713,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="Ju9-PZ-rTO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="Ju9-PZ-rTO" customClass="QuestionsCell" customModule="Impart" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ju9-PZ-rTO" id="WpW-Qb-tfc">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cu-Uo-IgR">
+                                            <rect key="frame" x="11" y="6" width="31" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="6tZ-aH-oSO"/>
+                                                <constraint firstAttribute="width" constant="31" id="FUl-37-5P4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="24"/>
+                                            <color key="textColor" red="0.094752049549999995" green="0.54100743750000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMc-av-FC0">
+                                            <rect key="frame" x="47" y="11" width="320" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="320" id="HeY-kQ-wMe"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0cu-Uo-IgR" firstAttribute="leading" secondItem="WpW-Qb-tfc" secondAttribute="leadingMargin" constant="3" id="6iH-ht-BpE"/>
+                                        <constraint firstItem="0cu-Uo-IgR" firstAttribute="top" secondItem="WpW-Qb-tfc" secondAttribute="topMargin" constant="-2" id="Eeo-LT-dcl"/>
+                                        <constraint firstItem="AMc-av-FC0" firstAttribute="leading" secondItem="0cu-Uo-IgR" secondAttribute="trailing" constant="5" id="IIV-IK-n3V"/>
+                                        <constraint firstItem="AMc-av-FC0" firstAttribute="centerY" secondItem="WpW-Qb-tfc" secondAttribute="centerY" id="ggh-11-WWT"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="checkMark" destination="0cu-Uo-IgR" id="b1r-S8-gYC"/>
+                                    <outlet property="questionLabel" destination="AMc-av-FC0" id="EaA-Ug-qyZ"/>
                                     <segue destination="Pzk-GN-SIr" kind="show" identifier="answerQuestion" id="jrJ-tk-vBe"/>
                                 </connections>
                             </tableViewCell>
@@ -739,7 +769,7 @@
         <image name="journal" width="250" height="231"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z5D-IW-c4v"/>
+        <segue reference="jrJ-tk-vBe"/>
         <segue reference="k53-p3-7Vz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.52549019610000003" green="0.32549019610000002" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>

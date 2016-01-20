@@ -42,6 +42,7 @@
 		B0AA2D481C47F9C200ECD98A /* GetTopicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D471C47F9C200ECD98A /* GetTopicApi.swift */; };
 		B0AA2D4A1C4EABA700ECD98A /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0AA2D491C4EABA700ECD98A /* fontawesome-webfont.ttf */; };
 		B0AA2D4C1C4EAE1900ECD98A /* TopicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D4B1C4EAE1900ECD98A /* TopicsCell.swift */; };
+		B0AA2D4E1C5000B900ECD98A /* QuestionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA2D4D1C5000B900ECD98A /* QuestionsCell.swift */; };
 		B0FCCE171C28675E009FECB0 /* GetListenersApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		B0AA2D471C47F9C200ECD98A /* GetTopicApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopicApi.swift; sourceTree = "<group>"; };
 		B0AA2D491C4EABA700ECD98A /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		B0AA2D4B1C4EAE1900ECD98A /* TopicsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsCell.swift; sourceTree = "<group>"; };
+		B0AA2D4D1C5000B900ECD98A /* QuestionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsCell.swift; sourceTree = "<group>"; };
 		B0FCCE161C28675E009FECB0 /* GetListenersApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListenersApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +178,7 @@
 				B0AA2D451C47F48600ECD98A /* TopicsController.swift */,
 				B0AA2D4B1C4EAE1900ECD98A /* TopicsCell.swift */,
 				B02DE83A1C44164600BC7A40 /* QuestionsController.swift */,
+				B0AA2D4D1C5000B900ECD98A /* QuestionsCell.swift */,
 			);
 			name = Impart;
 			path = Memories;
@@ -387,6 +390,7 @@
 				B07AA6671C29DB5F00695F96 /* Session.swift in Sources */,
 				B02DE83F1C44183500BC7A40 /* GetUserApi.swift in Sources */,
 				B0AA2D421C47F26B00ECD98A /* GetTopicsApi.swift in Sources */,
+				B0AA2D4E1C5000B900ECD98A /* QuestionsCell.swift in Sources */,
 				B07AA65F1C29B85B00695F96 /* User.swift in Sources */,
 				B0561F391C24839E00213F33 /* AppDelegate.swift in Sources */,
 				B07AA67E1C3AF6A900695F96 /* ListenersController.swift in Sources */,

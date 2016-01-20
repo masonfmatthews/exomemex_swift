@@ -24,9 +24,17 @@ class LandingController: UIViewController {
         Style.secondaryButton(self.familyButton)
         Style.secondaryButton(self.logoutButton)
         
+        //TODO: Better way to do a no-op?
+        AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
+            if granted==false {
+                print("Microphone access denied.")
+            }
+        })
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         self.userApi = GetUserApi(user_id: session.id!)
         
-        // TODO: Needs to reload when we come BACK to the landing controller.
         let questionCount = self.userApi!.getOpenQuestionCount()
         if questionCount > 0 {
             let word = (questionCount == 1 ? "Question" : "Questions")
@@ -35,13 +43,6 @@ class LandingController: UIViewController {
         } else {
             self.interviewLabel.text = ""
         }
-        
-        //TODO: Better way to do a no-op?
-        AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
-            if granted==false {
-                print("Microphone access denied.")
-            }
-        })
     }
     
     override func didReceiveMemoryWarning() {

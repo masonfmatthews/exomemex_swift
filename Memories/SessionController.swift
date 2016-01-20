@@ -8,8 +8,15 @@ final class SessionController {
     static let sharedController = SessionController()
     
     private init() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        session = Session(id: defaults.objectForKey("id") as? Int, token: defaults.objectForKey("token") as? String)
+        if (Keychain.load("id") == nil || Keychain.load("token") == nil) {
+            session = Session()
+        } else {
+            let id = Int(String(data: Keychain.load("id")!, encoding: NSUTF8StringEncoding)!)
+            print(id)
+            let token = String(data: Keychain.load("token")!, encoding: NSUTF8StringEncoding)
+            print(token)
+            session = Session(id: id, token: token)
+        }
     }
     
     // Register a notification.  Used below.
@@ -28,20 +35,15 @@ final class SessionController {
     }
     
     func setIdAndToken(id: Int, token: String) -> Void {
-        //TODO: Use keychain access instead?  For security reasons?
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(id, forKey: "id")
-        defaults.setObject(token, forKey: "token")
-        defaults.synchronize()
+        Keychain.save("id", data: "\(id)".dataUsingEncoding(NSUTF8StringEncoding)!)
+        Keychain.save("token", data: token.dataUsingEncoding(NSUTF8StringEncoding)!)
         
         self.session = Session(id: id, token: token)
     }
     
     func removeIdAndToken() -> Void {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.removeObjectForKey("id")
-        defaults.removeObjectForKey("token")
-        defaults.synchronize()
+        Keychain.delete("id")
+        Keychain.delete("token")
         
         self.session = Session()
         

@@ -615,6 +615,7 @@
 		B0561F651C24839E00213F33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "iOS Developer";
 				INFOPLIST_FILE = MemoriesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.exomemex.MemoriesUITests;

@@ -17,6 +17,7 @@ class RecordController: UIViewController {
     
     @IBAction func resetRecording(sender: AnyObject) {
         self.audioRecorder!.deleteRecording()
+        UIApplication.sharedApplication().idleTimerDisabled = false
         
         self.innerRecordButton.layer.removeAllAnimations()
         Style.disabledPrimaryButton(self.saveButton)
@@ -26,6 +27,7 @@ class RecordController: UIViewController {
     @IBAction func saveRecording(sender: AnyObject) {
         self.innerRecordButton.layer.removeAllAnimations()
         self.audioRecorder!.stop()
+        UIApplication.sharedApplication().idleTimerDisabled = false
     }
     
     override func viewDidLoad() {
@@ -117,6 +119,8 @@ class RecordController: UIViewController {
                     //record
                     try! self.audioRecorder = AVAudioRecorder(URL: url, settings: settings)
                     self.audioRecorder!.record()
+                    
+                    UIApplication.sharedApplication().idleTimerDisabled = true
                     
                     Style.primaryButton(self.saveButton)
                     Style.secondaryButton(self.resetButton)

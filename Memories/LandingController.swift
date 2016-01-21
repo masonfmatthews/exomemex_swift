@@ -56,4 +56,7 @@ class LandingController: UIViewController {
         }
     }
     
+    @IBAction func unwindToLanding(segue: UIStoryboardSegue) {
+    }
+    
 }

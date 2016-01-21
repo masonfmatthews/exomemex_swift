@@ -7,6 +7,7 @@ class ChooseListenersController: UITableViewController {
     var question : Question?
     var session = SessionController.sharedController.session
     var listeners = [User]()
+    var alert = UIAlertController(title: "Saving...", message: "Please wait.", preferredStyle: .Alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class ChooseListenersController: UITableViewController {
     }
     
     func sendClip(sender: AnyObject) {
+        self.presentViewController(self.alert, animated: true, completion: nil)
+        
         var clipFields = ["name" : self.clipName]
         if question != nil {
             clipFields["question_id"] = "\(question!.id)"
@@ -38,10 +41,9 @@ class ChooseListenersController: UITableViewController {
             }
         }
         
-        let _ = CreateClipApi(clipFields: clipFields, listenerIds: listenerIds, path: filePath)
+        let _ = CreateClipApi(clipFields: clipFields, listenerIds: listenerIds, path: filePath, callback: saveCallback)
         //TODO: Later, display something different if the API returns an error.
         
-        performSegueWithIdentifier("finishedClip", sender: self)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -59,6 +61,16 @@ class ChooseListenersController: UITableViewController {
         cell.listenerName.text = "\(listener.name)"
         cell.listenerId.text = "\(listener.id)"
         return cell
+    }
+    
+    private func saveCallback(success: Bool) {
+        self.alert.dismissViewControllerAnimated(true, completion: nil)
+        
+        if success {
+            self.performSegueWithIdentifier("unwindSegue", sender: self)
+        } else {
+            print("Could not save clip.")
+        }
     }
     
 }

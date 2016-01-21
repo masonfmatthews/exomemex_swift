@@ -2,7 +2,7 @@ import Foundation
 
 final class CreateClipApi : Api {
     
-    init(clipFields: Dictionary<String,String>, listenerIds: [Int], path: String) {
+    init(clipFields: Dictionary<String,String>, listenerIds: [Int], path: String, callback: (Bool) -> Void) {
         super.init()
         
         let request = NSMutableURLRequest(URL: NSURL(string: self.domain + self.path + "clips")!)
@@ -52,9 +52,17 @@ final class CreateClipApi : Api {
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request){
             (data,response,error) in
             
-            if error != nil {print("Error=\(error)"); return }
-            guard let _ = data else { print("No response received"); return }
-
+            if error != nil {
+                print("Error=\(error)")
+                callback(false)
+                return
+            }
+            guard let _ = data else {
+                print("No response received")
+                callback(false)
+                return
+            }
+            callback(true)
         }
         
         task.resume()

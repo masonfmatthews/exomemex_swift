@@ -12,9 +12,7 @@ final class SessionController {
             session = Session()
         } else {
             let id = Int(String(data: Keychain.load("id")!, encoding: NSUTF8StringEncoding)!)
-            print(id)
             let token = String(data: Keychain.load("token")!, encoding: NSUTF8StringEncoding)
-            print(token)
             session = Session(id: id, token: token)
         }
     }

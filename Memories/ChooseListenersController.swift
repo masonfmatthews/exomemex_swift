@@ -7,7 +7,7 @@ class ChooseListenersController: UITableViewController {
     var question : Question?
     var session = SessionController.sharedController.session
     var listeners = [User]()
-    var alert = UIAlertController(title: "Saving...", message: "Please wait.", preferredStyle: .Alert)
+    var alert = UIAlertController(title: "Saving...", message: "Please wait.  If you recorded a long entry, it may take minutes to save.", preferredStyle: .Alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,6 +1,6 @@
 import UIKit
 
-class ChooseListenersController: UITableViewController {
+final class ChooseListenersController: UITableViewController {
     
     var clipName = String()
     var filePath = String()

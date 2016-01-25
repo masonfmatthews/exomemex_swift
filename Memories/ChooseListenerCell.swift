@@ -1,6 +1,6 @@
 import UIKit
 
-class ChooseListenerCell: UITableViewCell {
+final class ChooseListenerCell: UITableViewCell {
     
     @IBOutlet weak var listenerSwitch: UISwitch!
     @IBOutlet weak var listenerName: UILabel!

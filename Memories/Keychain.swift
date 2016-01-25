@@ -1,7 +1,7 @@
 import UIKit
 import Security
 
-class Keychain {
+final class Keychain {
     
     class func save(key: String, data: NSData) -> Bool {
         let query = [

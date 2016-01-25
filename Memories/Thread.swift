@@ -1,6 +1,6 @@
 import Foundation
 
-class Thread {
+final class Thread {
     class func runOnUIThread(fn:()->()) {
         if NSThread.isMainThread() {
             fn()

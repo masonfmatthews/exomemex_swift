@@ -1,6 +1,6 @@
 import UIKit
 
-class TopicsController: UITableViewController {
+final class TopicsController: UITableViewController {
     
     var session = SessionController.sharedController.session
     var topics : [Topic] = []

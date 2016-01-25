@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-class RecordController: UIViewController {
+final class RecordController: UIViewController {
     
     var filePath : String?
     var audioRecorder : AVAudioRecorder?

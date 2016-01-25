@@ -1,6 +1,6 @@
 import UIKit
 
-class QuestionsController: UITableViewController {
+final class QuestionsController: UITableViewController {
     
     var session = SessionController.sharedController.session
     var topic : Topic?

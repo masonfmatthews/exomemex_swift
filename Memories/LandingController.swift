@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-class LandingController: UIViewController {
+final class LandingController: UIViewController {
     
     var session = SessionController.sharedController.session
     var userApi: GetUserApi?

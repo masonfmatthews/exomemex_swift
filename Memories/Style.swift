@@ -1,6 +1,6 @@
 import UIKit
 
-class Style {
+final class Style {
     static let primaryColor = UIColor(red: 134/255, green: 83/255, blue: 39/255, alpha: 1)
     static let importantColor = UIColor(red: 24/255, green: 138/255, blue: 39/255, alpha: 1)
     

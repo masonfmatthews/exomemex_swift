@@ -1,6 +1,6 @@
 import UIKit
 
-class ListenersController: UITableViewController {
+final class ListenersController: UITableViewController {
     
     var session = SessionController.sharedController.session
     var listeners : [User] = []

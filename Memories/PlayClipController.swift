@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-class PlayClipController: UIViewController {
+final class PlayClipController: UIViewController {
     
     var clip : Clip?
     var player = AVPlayer()

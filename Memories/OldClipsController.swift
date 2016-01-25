@@ -1,6 +1,6 @@
 import UIKit
 
-class OldClipsController: UITableViewController {
+final class OldClipsController: UITableViewController {
     
     var session = SessionController.sharedController.session
     var clips : [Clip] = []

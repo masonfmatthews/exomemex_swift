@@ -20,7 +20,7 @@ final class AuthenticateApi : Api {
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request){
             (data,response,error) in
             
-            if error != nil {print("Error=\(error)"); return }
+            guard error != nil else {print("Error=\(error)"); return }
             guard let data = data else { print("No response received"); return }
             
             do {

@@ -15,21 +15,20 @@ final class GetClipsApi : Api {
     }
     
     func getCount() -> Int {
-        return self.json!.count
+        guard let json = self.json else { return 0 }
+        return json.count
     }
     
     func getAll() -> [Clip] {
-        if json != nil {
-            var clips:[Clip] = []
-            for result in json! {
-                clips.append(Clip(id: result["id"] as! Int,
-                    name: result["name"] as! String,
-                    url: result["url"] as! String))
-            }
-            return clips
-        } else {
-            return []
+        guard json != nil else { return [] }
+        var clips:[Clip] = []
+        for result in json! {
+            guard let id = result["id"] as? Int,
+                name = result["name"] as? String,
+                url = result["url"] as? String else {continue}
+            clips.append(Clip(id: id, name: name, url: url))
         }
+        return clips
     }
     
 }
